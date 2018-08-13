@@ -1,0 +1,7 @@
+<%= simple_form_for [@services] do |f| %>
+  <%= f.input "Location", :location %>
+  <%= f.input "From", :start_day %>
+  <%= f.input "Until", :end_day %>
+  <%= f.input "Service", :service %>
+  <%= f.submit "Submit" %>
+<% end %>
