@@ -1,13 +1,6 @@
-
-
-    <li><%= @user.name %></li>
-    <li><%= @user.bio %></li>
-    <li><%= @user.gender %></li>
-    <li><%= @user.gender %></li>
-
 <div class="service-container">
 
-   <% @user.services.each do |s| %>
+   <% @user_services.each do |s| %>
 
     <div class="card-service">
 
@@ -32,5 +25,3 @@
   <% end %>
 
 </div>
-
-<%= link_to "Create a New Service", new_service_path %>
