@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   resources :services
-  # get 'services/index'
-  # get 'services/show'
-  # get 'services/new'
-  # get 'services/create'
-  # get 'services/edit'
-  # get 'services/update'
-  # get 'services/destroy'
+
   devise_for :users
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4460d6e1e8caefb6937fe30a89c25155bafb8f7c
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
