@@ -1,6 +1,9 @@
 <%= simple_form_for [@service] do |f| %>
   <%= f.input :title %>
+  <%= f.input :category %>
   <%= f.input :location %>
+  <%= f.input :language %>
   <%= f.input :description %>
+  <%= f.input :price %>
   <%= f.submit "Submit" %>
 <% end %>
