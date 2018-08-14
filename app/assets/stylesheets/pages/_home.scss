@@ -1,4 +1,25 @@
 // Specific CSS for your home-page
+
+.larry-card {
+ background: #EF5C3A;
+ opacity: .7;
+ color: white;
+ display: flex;
+align-items: center;
+}
+
+
+.avatar{
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card-description {
+  align-items: center;
+
+
 #background-image {
   background-image: url("home-page.jpg");
   background-position: center;
@@ -27,4 +48,3 @@ h1 {
   position: absolute;
   top: 250px;
   left: 200px;
-}
