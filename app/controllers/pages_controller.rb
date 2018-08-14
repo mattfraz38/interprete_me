@@ -3,8 +3,4 @@ class PagesController < ApplicationController
     @services = Service.all
   end
 
-  def larry
-    @services = Service.all
-  end
-
 end

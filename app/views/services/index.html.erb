@@ -1,19 +1,5 @@
 <h1>List of matching services</h1>
 
-<ul>
-  <% @services.each do |s| %>
-  <%= link_to service_path(s) do %>
-    <div class="card">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li><%= s.category %></li>
-    </div>
-  <% end %>
-  <% end %>
-</ul>
-
 <div class="container">
   <div class="row">
     <% @services.each do |s| %>
