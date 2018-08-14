@@ -1,0 +1,19 @@
+.service-container{
+  margin: 2px 15px;
+}
+.card-service {
+  background-color: #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  &:nth-of-type(odd) {
+    background-color: $foam-green;
+  }
+}
+
+.service {
+  flex: 1;
+}
+
+
