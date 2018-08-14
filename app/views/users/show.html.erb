@@ -2,3 +2,6 @@
     <li><%= @user.bio %></li>
     <li><%= @user.gender %></li>
     <li><%= @user.gender %></li>
+<% @user.services.each do |service| %>
+ <p> <%=  service.title %></p>
+<% end %>

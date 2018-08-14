@@ -4,12 +4,34 @@
   <% @services.each do |s| %>
   <%= link_to service_path(s) do %>
     <div class="card">
-      <li><%= s.title %></li>
-      <li><%= s.description %></li>
-      <li><%= s.price %></li>
-      <li><%= s.location %></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
       <li><%= s.category %></li>
     </div>
   <% end %>
   <% end %>
 </ul>
+
+<div class="container">
+  <div class="row">
+    <% @services.each do |s| %>
+
+    <div class="col col-xs-12 col-sm-4">
+
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+      <div class="card-category"><%= s.location %></div>
+      <div class="card-description">
+        <h2><%= s.title %></h2>
+        <p><%= s.category %></p>
+      </div>
+
+    </div>
+
+
+    </div>
+    <% end %>
+
+  </div>
+</div>
