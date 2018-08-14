@@ -1,19 +1,38 @@
+body {
+  background: white;
+}
 .service-container{
-  margin: 2px 15px;
+  margin: 26px;
+
 }
 .card-service {
-  background-color: #E5E5E5;
+  background: $foam-green;  /* fallback for old browsers */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 3px;
   &:nth-of-type(odd) {
-    background-color: $foam-green;
+  background: #66C6F3;
+
   }
+}
+
+.card-service h1 {
+  font-size: bolder;
+
 }
 
 .service {
   flex: 1;
 }
 
-
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 3px;
+}
