@@ -11,6 +11,12 @@ User.delete_all
 
 puts "Deleted Users, Services and Appointments"
 
+Appointment.delete_all
+Service.delete_all
+
+User.delete_all
+
+puts "Deleted all items!"
 
 User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry the Hairy Fairy", bio: "Loves puppies, and flying high in the sky. Lactose intolerant. Open minded. Matt call me back, please.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
 User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt the Big Lat", bio: "Loves his protein shakes and heavy weights.", gender: "Male", languages: ["English", "Japanese"])
@@ -18,6 +24,7 @@ User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Kat with
 User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George ", bio: "", gender: "Male", languages: ["English"])
 
 puts "Created #{User.count} users!"
+
 
 Service.create!(category: "Night Life", title: "Club!", description: "Go to the club", price: 20, location: "Tokyo", user_id: User.all.sample.id, language: "German")
 Service.create!(category: "Day Life", title: "Swim with the sharks", description: "Go swimming with the sharks!", price: 23030, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
@@ -30,6 +37,7 @@ Service.create!(category: "Adventure", title: "Fishing", description: "Catch the
 
 puts "Created #{Service.count} services!"
 
+
 Appointment.create!(start_day: (Date.today + 10), end_day: (Date.today + 15), confirmed: false, user_id: User.all.sample.id, service_id: Service.all.sample.id)
 Appointment.create!(start_day: (Date.today + 20), end_day: (Date.today + 25), confirmed: false, user_id: User.all.sample.id, service_id: Service.all.sample.id)
 Appointment.create!(start_day: (Date.today), end_day: (Date.today + 15), confirmed: false, user_id: User.all.sample.id, service_id: Service.all.sample.id)
@@ -39,6 +47,4 @@ Appointment.create!(start_day: (Date.today + 20), end_day: (Date.today + 25), co
 Appointment.create!(start_day: (Date.today), end_day: (Date.today + 15), confirmed: false, user_id: User.all.sample.id, service_id: Service.all.sample.id)
 Appointment.create!(start_day: (Date.today + 2), end_day: (Date.today + 30), confirmed: false, user_id: User.all.sample.id, service_id: Service.all.sample.id)
 
-
-
-puts "Created #{Appointment.count} appointments!"
+puts "Created #{Appointment.count} Appointments!"
