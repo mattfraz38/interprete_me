@@ -6,6 +6,7 @@ body {
 
 }
 .card-service {
+  color: #181818;
   background: $foam-green;  /* fallback for old browsers */
   display: flex;
   justify-content: space-between;
@@ -13,8 +14,9 @@ body {
   margin: 10px;
   padding: 25px;
   border-radius: 3px;
-  &:nth-of-type(odd) {
+  &:nth-of-type(even) {
   background: #66C6F3;
+  color: white;
 
   }
 }
