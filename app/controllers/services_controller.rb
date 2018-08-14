@@ -9,16 +9,16 @@ class ServicesController < ApplicationController
   end
 
   def new
-    @restaurant = Restaurant.new
+    @service = Service.new
   end
 
   def create
-    service = Service.new(service.params)
+    service = Service.new(service_params)
     if @service.save
-      redirect_to service_path(@service)
+      redirect_to my_services_path
     else
       render :new
-
+    end
   end
 
   def edit
@@ -39,7 +39,7 @@ class ServicesController < ApplicationController
     params.require(:service).permit(:description, :price, :location, :language,:category, :title)
   end
 
-  def set_services
+  def set_service
     @service = Service.find(params[:id])
   end
 end

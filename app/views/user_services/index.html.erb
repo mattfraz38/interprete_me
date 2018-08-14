@@ -1,0 +1,15 @@
+<h1><%= current_user.name %></h1>
+
+<ul>
+  <% @user_services.each do |s| %>
+    <li><%= s.title %></li>
+    <li><%= s.description %></li>
+    <li><%= s.category %></li>
+    <li><%= s.price %></li>
+    <li><%= s.location %></li>
+    <li><%= s.language %></li>
+    <br>
+<% end %>
+</ul>
+
+<%= link_to "Add a New Service", new_service_path %>
