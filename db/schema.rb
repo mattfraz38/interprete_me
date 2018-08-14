@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2018_08_14_073918) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.text "bio"
-    t.text "photo"
     t.string "gender"
     t.text "languages"
     t.string "availability"
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 2018_08_14_073918) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

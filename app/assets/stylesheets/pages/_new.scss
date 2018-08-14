@@ -1,13 +1,19 @@
 .create_service_card {
   height: 650px;
   width: 500px;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   background: white;
   padding: 15px;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: .6;
+  opacity: .9;
+}
+
+.form-control-label {
+  display: block;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .new_service_container {
