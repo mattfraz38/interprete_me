@@ -2,14 +2,15 @@
 
 <ul>
   <% @services.each do |s| %>
-  <%= link_to service_path(s) do %>
-    <div class="card">
-      <li><%= s.title %></li>
-      <li><%= s.description %></li>
-      <li><%= s.price %></li>
-      <li><%= s.location %></li>
-      <li><%= s.category %></li>
-    </div>
-  <% end %>
+    <%= link_to service_path(s) do %>
+      <div class="card">
+        <li><%= s.title %></li>
+        <li><%= s.description %></li>
+        <li><%= s.price %></li>
+        <li><%= s.location %></li>
+        <li><%= s.category %></li>
+        <br>
+      </div>
+    <% end %>
   <% end %>
 </ul>

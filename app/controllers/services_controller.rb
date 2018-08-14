@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
   end
 
   def create
-    service = Service.new(service_params)
+    @service = Service.new(service_params)
     if @service.save
       redirect_to my_services_path
     else

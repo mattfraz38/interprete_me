@@ -4,6 +4,9 @@
   <h1>Find an Adventure</h1>
 
     <%#= render "form", services: @services %>
+    <%= link_to services_path do %>
+      <div class="btn btn-primary">Search</div>
+    <% end %>
   </div>
 
 </body>
