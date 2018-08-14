@@ -9,8 +9,11 @@
 
     <% if current_user %>
       <!-- Links when logged in -->
+
+      <%= link_to "Sign up",  new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Log in", services_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Services", services_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    
+
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
