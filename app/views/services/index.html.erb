@@ -1,18 +1,4 @@
-<h1>List of matching services</h1>
 
-<ul>
-  <% @services.each do |s| %>
-  <%= link_to service_path(s) do %>
-    <div class="card">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li><%= s.category %></li>
-    </div>
-  <% end %>
-  <% end %>
-</ul>
 
 <div class="container">
   <div class="row">
@@ -20,12 +6,13 @@
 
     <div class="col col-xs-12 col-sm-4">
 
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <div class="card">
       <div class="card-category"><%= s.location %></div>
       <div class="card-description">
         <h2><%= s.title %></h2>
         <p><%= s.category %></p>
       </div>
+      <a class="card-link" href="#" ></a>
 
     </div>
 
@@ -35,3 +22,6 @@
 
   </div>
 </div>
+
+
+
