@@ -1,2 +1,33 @@
-<h1>Services#show</h1>
-<p>Find me in app/views/services/show.html.erb</p>
+<div class = "service-card">
+  <ul>
+    <li><%= @service.title %></li>
+    <li><%= @service.description %></li>
+    <li><%= @service.location %></li>
+    <li><%= @service.price %></li>
+    <li><%= @service.category %></li>
+  </ul>
+</div>
+<div class = "user-card">
+  <ul>
+    <%=  %>
+    <% if @service.user.name %>
+      <li><%= @service.user.name %></li>
+    <% end %>
+    <% if @service.user.bio %>
+      <li><%= @service.user.bio %></li>
+    <% end %>
+    <% if @service.user.photo %>
+      <li><%= @service.user.photo %></li>
+    <% end %>
+    <% if @service.user.gender %>
+      <li><%= @service.user.gender %></li>
+    <% end %>
+    <% if @service.user.languages %>
+      <li><%= @service.user.languages %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to service_appointments_path, method: :post do %>
+  <div class="btn btn-primary">Sign Up!</div>
+<% end %>

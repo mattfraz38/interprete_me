@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
   end
 
   def create
-    service = Service.new(service_params)
+    @service = Service.new(service_params)
     if @service.save
       redirect_to my_services_path
     else
@@ -39,7 +39,7 @@ class ServicesController < ApplicationController
     params.require(:service).permit(:description, :price, :location, :language,:category, :title)
   end
 
-  def set_services
+  def set_service
     @service = Service.find(params[:id])
   end
 end

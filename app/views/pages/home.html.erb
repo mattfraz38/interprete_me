@@ -1,9 +1,12 @@
 <body id="background-image">
-  <div class="card position">
+  <div class="home_card home_card_position">
 
   <h1>Find an Adventure</h1>
 
-    <%#= render "form",  %>
+    <%#= render "form", services: @services %>
+    <%= link_to services_path do %>
+      <div class="btn btn-primary">Search</div>
+    <% end %>
   </div>
 
 </body>
