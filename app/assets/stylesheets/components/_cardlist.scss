@@ -6,6 +6,8 @@
   color: white;
   position: relative;
   background-color: #EF5C3A;
+  margin-bottom: 10px;
+  opacity: .8;
 }
 .card-user {
   position: absolute;
@@ -23,6 +25,7 @@
 }
 .card-description {
   position: absolute;
+  justify-content: center;
   bottom: 10px;
   left: 10px;
 }
