@@ -1,2 +1,15 @@
-<h1>Services#index</h1>
-<p>Find me in app/views/services/index.html.erb</p>
+<h1>List of matching services</h1>
+
+<ul>
+  <% @services.each do |s| %>
+  <%= link_to service_path(s) do %>
+    <div class="card">
+      <li><%= s.title %></li>
+      <li><%= s.description %></li>
+      <li><%= s.price %></li>
+      <li><%= s.location %></li>
+      <li><%= s.category %></li>
+    </div>
+  <% end %>
+  <% end %>
+</ul>
