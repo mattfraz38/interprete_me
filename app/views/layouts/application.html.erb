@@ -11,13 +11,6 @@
   </head>
   <body>
     <%= render "layouts/navbar" %>
-    <% if current_user %>
-      <%= link_to "Dashboard", my_services_path %>
-      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-    <% end %>
-    <% if !current_user %>
-      <%= link_to "Log In", new_user_session_path %>
-    <% end %>
     <%= yield %>
     <%= render "layouts/footer" %>
     <%= javascript_include_tag 'application' %>
