@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+#background-image {
+  background-image: url("home-page.jpg");
+  // background-size: contain;
+  background-position: center;
+  background: cover;
+  height: 100vh;
+  background-size: 100% 100%;
+}
+
+h1 {
+  color: White;
+}

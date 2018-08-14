@@ -1,6 +1,6 @@
-<%= simple_form_for [@services] do |f| %>
+<%= simple_form_for [@users] do |f| %>
   <%= f.input "Location", :location %>
-  <%= f.input "From", :start_day %>
+  <%= f.input "From", :start_day, :as :datepicker %>
   <%= f.input "Until", :end_day %>
   <%= f.input "Service", :service %>
   <%= f.submit "Submit" %>
