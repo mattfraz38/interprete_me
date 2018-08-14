@@ -1,7 +1,34 @@
+
+
     <li><%= @user.name %></li>
     <li><%= @user.bio %></li>
     <li><%= @user.gender %></li>
     <li><%= @user.gender %></li>
-<% @user.services.each do |service| %>
- <p> <%=  service.title %></p>
-<% end %>
+
+<div class="service-container">
+
+   <% @user.services.each do |s| %>
+
+    <div class="card-service">
+
+    <div class="service">
+      <h2><%= s.title %><h2>
+    </div>
+
+    <div class="service">
+      <%= s.price %>
+    </div>
+
+    <div class="service">
+      <%= s.description%>
+    </div>
+
+
+     <div class="service">
+      <%= s.location %>
+    </div>
+
+  </div>
+  <% end %>
+
+</div>
