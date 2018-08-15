@@ -14,6 +14,7 @@ h1 {
 .home_card {
   height: 450px;
   width: 500px;
+  margin: 0 auto;
   text-align: center;
   background: white;
   padding: 30px;
@@ -23,11 +24,11 @@ h1 {
   opacity: .5;
 }
 
-.home_card_position {
-  position: absolute;
-  top: 250px;
-  left: 200px;
-}
+// .home_card_position {
+//   position: absolute;
+//   top: 250px;
+//   left: 200px;
+// }
 
 .home_container {
   margin-top: 10px;
