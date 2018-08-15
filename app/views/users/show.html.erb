@@ -17,20 +17,20 @@
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Services Hosted (<%= @user.services.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting</button>
-  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Appointments Attending</button>
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Experiences Hosted (<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting (<%= @user.service_appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Appointments Attending (<%= @user.appointments.count %>)</button>
 </div>
 
 <!-- Tab content -->
 <div id="services-hosted" class="tabcontent">
   <div class="service-container">
     <div class="new-service-btn">
-      <%= link_to "Create a Service", new_service_path %>
+      <%= link_to "Create an Experience", new_service_path %>
     </div>
     <div class="card-service-header">
         <div class="service">
-          <h2>SERVICE<h2>
+          <h2>EXPERIENCE<h2>
         </div>
         <div class="service">
           <h2>PRICE</h2>
@@ -45,7 +45,7 @@
    <% @user.services.each do |s| %>
     <div class="card-service">
       <div class="service">
-        <h3><%= s.title %></h3>
+        <h3><%= link_to s.title, service_path(s) %></h3>
       </div>
       <div class="service">
          <h3>$<%= s.price %></h3>
@@ -85,7 +85,7 @@
           <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
         </div>
         <div class="service">
-           <h3><%= a.service.title %></h3>
+           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
         <div class="service">
           <h3><%= a.start_day%></h3>
@@ -101,7 +101,7 @@
 <div id="hosting-appointments" class="tabcontent">
   <div class="card-service-header">
     <div class="service">
-      <h2>HOST NAME<h2>
+      <h2>ATTENDEE NAME<h2>
     </div>
     <div class="service">
       <h2>EXPERIENCE</h2>
@@ -114,13 +114,13 @@
     </div>
 </div>
   <div class="service-container">
-    <% @user.appointments.each do |a| %>
+    <% @user.service_appointments.each do |a| %>
       <div class="card-service">
         <div class="service">
-          <h3><%= a.service.user.name %></h3>
+          <h3><%= link_to a.user.name, user_path(a.user) %></h3>
         </div>
         <div class="service">
-           <h3><%= a.service.title %></h3>
+           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
         <div class="service">
           <h3><%= a.start_day%></h3>
