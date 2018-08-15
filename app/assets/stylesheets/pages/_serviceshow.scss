@@ -1,0 +1,90 @@
+// .service-show-page {
+//   background-color: #66C6F3;
+//   height: 100vh;
+//   h1 {
+//     padding-top: 50px;
+//     margin-top: 0;
+//     font-family: Helvetica;
+//     font-size: 62px;
+//   }
+// }
+
+// .book-appointment {
+//   width: 400px;
+//   margin: 50px auto;
+
+// }
+
+// .flex-box {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+// .service-show-page {
+//   background-color: #66C6F3;
+//   height: 100vh;
+//     h1 {
+//       font-family: Helvetica;
+//       font-size: 62px;
+//     }
+
+// }
+// background-color: #FCCB00;
+//   border-radius: 10px;
+//   margin-top: 0;
+//   padding: 30px;
+//   p {
+//     font-size: 40px;
+//   }
+
+.service-show-page {
+  font-family: Arvo;
+
+}
+
+  .title-show-page{
+    text-align: center;
+    font-weight: bolder;
+    color: #92813d;
+
+}
+.service-show-container {
+  display: flex;
+  justify-content: space-between;
+  color: #716c55;
+
+}
+.service-show-card {
+    width: 45%;
+    text-align: center;
+    background-color: #FCCB00;
+    max-height: 100%;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #efeeee;
+    h3 {
+      text-decoration: underline;
+    }
+
+}
+.service-show-profile {
+    background-color: #FCCB00;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    padding: -10px;
+    width: 40%;
+    max-height: 100%;
+    box-shadow: 2px 2px 2px #efeeee;
+    text-align: center;
+
+}
+.book-appointment {
+    color: #67808c;
+    width: 50%;
+    margin: 35px auto;
+    background-color: #66c6f38c;
+    padding: 50px;
+    box-shadow: 2px 2px 2px #efeeee;
+    border-radius: 3px;
+
+}
+
