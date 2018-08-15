@@ -17,9 +17,9 @@
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Experiences Hosted (<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Offered Experiences (<%= @user.services.count %>)</button>
   <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting (<%= @user.service_appointments.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Appointments Attending (<%= @user.appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Requested Appointments (<%= @user.appointments.count %>)</button>
 </div>
 
 <!-- Tab content -->
