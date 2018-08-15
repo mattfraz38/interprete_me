@@ -8,7 +8,7 @@
         <%= link_to service_path(s) do  %>
           <div class="card">
             <div class = "picture">
-              <img src="https://picsum.photos/364/220?image=<%= s.id + 8%>" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
+              <img src="https://picsum.photos/364/220?image=<%= s.id - Service.first.id + 10 %>" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
             </div>
             <div class="card-category"><%= s.location %></div>
             <div class="card-description">
