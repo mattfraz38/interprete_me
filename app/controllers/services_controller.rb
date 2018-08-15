@@ -3,10 +3,10 @@ class ServicesController < ApplicationController
 
   def index
     @services = policy_scope(Service)
+
   end
 
   def show
-    # @service = policy_scope(Service.find(params[:id]))
     @appointment = Appointment.new
     authorize @service
 

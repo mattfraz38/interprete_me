@@ -5,7 +5,21 @@ class UserPolicy < ApplicationPolicy
     end
 
   end
+
+  def index?
+    return true
+  end
+
   def show?
+    return true
+    # @user == @record
+  end
+
+  def edit?
+    @user == @record
+  end
+
+  def edit?
     @user == @record
   end
 end
