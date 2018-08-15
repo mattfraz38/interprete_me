@@ -6,57 +6,136 @@
       <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
       <h4><%= @user.name %></h4>
       <p><strong><%= @user.gender %></strong></p>
+
       <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-default nounderline" %>
 
     </div>
-
-
     <div class="profile-bio">
       <p> <strong>About Me</strong> </p>
       <p><%= @user.bio %></p>
     </div>
-
-
   </div>
 </div>
 
 
- <div class="new-service-btn">
 
-<%= link_to "Create a Service", new_service_path %>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Experiences Hosted (<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting (<%= @user.service_appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Appointments Attending (<%= @user.appointments.count %>)</button>
 </div>
 
-
-
-<div class="service-container">
-
+<!-- Tab content -->
+<div id="services-hosted" class="tabcontent">
+  <div class="service-container">
+    <div class="new-service-btn">
+      <%= link_to "Create an Experience", new_service_path %>
+    </div>
+    <div class="card-service-header">
+        <div class="service">
+          <h2>EXPERIENCE<h2>
+        </div>
+        <div class="service">
+          <h2>PRICE</h2>
+        </div>
+        <div class="service">
+          <h2>DESCRIPTION </h2>
+        </div>
+         <div class="service">
+          <h2>CITY</h2>
+        </div>
+    </div>
    <% @user.services.each do |s| %>
-
     <div class="card-service">
-
-    <div class="service">
-      <h2><%= s.title %><h2>
+      <div class="service">
+        <h3><%= link_to s.title, service_path(s) %></h3>
+      </div>
+      <div class="service">
+         <h3>$<%= s.price %></h3>
+      </div>
+      <div class="service">
+        <h3> <%= s.description%></h3>
+      </div>
+       <div class="service">
+        <h3><%= s.location %></h3>
+      </div>
     </div>
-
-    <div class="service">
-      <h4>Price</h4>
-       <p> $<%= s.price %></p>
-    </div>
-
-    <div class="service">
-      <h4>Description </h4>
-      <p> <%= s.description%></p>
-
-    </div>
-
-
-     <div class="service">
-      <h4>City</h4>
-      <p><%= s.location %></p>
-
-    </div>
-
-  </div>
   <% end %>
+</div>
+
+
+</div>
+
+<div id="attending-appointments" class="tabcontent">
+  <div class="card-service-header">
+    <div class="service">
+      <h2>HOST NAME<h2>
+    </div>
+    <div class="service">
+      <h2>EXPERIENCE</h2>
+    </div>
+    <div class="service">
+      <h2>START DATE</h2>
+    </div>
+     <div class="service">
+      <h2>END DATE</h2>
+    </div>
+</div>
+  <div class="service-container">
+    <% @user.appointments.each do |a| %>
+      <div class="card-service">
+        <div class="service">
+          <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
+        </div>
+        <div class="service">
+           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+        </div>
+        <div class="service">
+          <h3><%= a.start_day%></h3>
+        </div>
+         <div class="service">
+          <h3><%= a.end_day %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div id="hosting-appointments" class="tabcontent">
+  <div class="card-service-header">
+    <div class="service">
+      <h2>ATTENDEE NAME<h2>
+    </div>
+    <div class="service">
+      <h2>EXPERIENCE</h2>
+    </div>
+    <div class="service">
+      <h2>START DATE</h2>
+    </div>
+     <div class="service">
+      <h2>END DATE</h2>
+    </div>
+</div>
+  <div class="service-container">
+    <% @user.service_appointments.each do |a| %>
+      <div class="card-service">
+        <div class="service">
+          <h3><%= link_to a.user.name, user_path(a.user) %></h3>
+        </div>
+        <div class="service">
+           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+        </div>
+        <div class="service">
+          <h3><%= a.start_day%></h3>
+        </div>
+         <div class="service">
+          <h3><%= a.end_day %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
 
 

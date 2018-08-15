@@ -19,10 +19,11 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'better_errors'
-
+gem "pundit"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
