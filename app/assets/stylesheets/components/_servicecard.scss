@@ -5,6 +5,19 @@ body {
   margin: 26px;
 
 }
+
+.card-service-header {
+  color: #181818;
+  background: rgb(10,10,10);  /* fallback for old browsers */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
 .card-service {
   color: #181818;
   background: $foam-green;  /* fallback for old browsers */
@@ -28,5 +41,12 @@ body {
 
 .service {
   flex: 1;
+  text-align: center;
+  h2 {
+    margin-top: 10px;
+  }
+  h3 {
+    margin-top: 10px;
+  }
 }
 
