@@ -11,10 +11,13 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    authorize @service
+
   end
 
   def create
     @service = Service.new(service_params)
+    authorize @service
     @service.user = current_user
     if @service.save
       redirect_to user_path(current_user)
@@ -43,5 +46,6 @@ class ServicesController < ApplicationController
 
   def set_service
     @service = Service.find(params[:id])
+    authorize @service
   end
 end
