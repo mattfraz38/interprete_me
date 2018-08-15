@@ -3,39 +3,12 @@
   background-image: url("home-page.jpg");
   background-position: center;
   background: cover;
-  height: 100vh;
+  height: 80vh;
   background-size: 100% 100%;
 }
 
 h1 {
   color: black;
-}
-
-.home_card {
-  height: 450px;
-  width: 500px;
-  text-align: center;
-  background: white;
-  padding: 30px;
-  border-radius: 4px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: .5;
-}
-
-.home_card_position {
-  position: absolute;
-  top: 250px;
-  left: 200px;
-}
-
-.home_container {
-  margin-top: 10px;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
 }
 
 body {

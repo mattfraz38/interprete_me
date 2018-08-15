@@ -1,15 +1,20 @@
 .card {
-  height: 175px;
+  height: 220px;
+  width: 100%;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
-  background-image: url('https://source.unsplash.com/random');
-  margin-bottom: 10px;
   opacity: .8;
   border-radius: 4px;
+  overflow: hidden;
 }
+
+.card:hover .picture {
+  filter: brightness(1);
+}
+
 .card-user {
   position: absolute;
   right: 10px;
@@ -50,4 +55,21 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.user-card {
+  background-color: #FCCB00;
+  border-radius: 10px;
+  margin-top: 0;
+  padding: 30px;
+  p {
+    font-size: 40px;
+  }
+}
+
+.service-card {
+  margin-top: 30px;
+  p {
+    font-size: 32px;
+  }
 }
