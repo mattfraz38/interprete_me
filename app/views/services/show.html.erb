@@ -1,29 +1,35 @@
 <div class = "service-show-page">
-  <h1 class="center"><%= @service.title %></h1>
-  <div class = "flex-box">
-    <div class = "service-card">
-      <p>Description: <%= @service.description %></p>
-      <p>Location: <%= @service.location %></p>
-      <p>Price: $<%= @service.price %></p>
-      <p>Category: <%= @service.category %></p>
-    </div>
-    <div class = "user-card">
+
+  <h1 class="title-show-page"><%= @service.title %></h1>
+
+  <div class = "service-show-container">
+
+    <div class = "service-show-profile">
         <% if @service.user.name %>
           <h2><%= @service.user.name %></h2>
         <% end %>
+         <% if @service.user.gender %>
+          <p> <%= @service.user.gender %></p>
+        <% end %>
+        <h4>About Me</h4>
         <% if @service.user.bio %>
-          <%= @service.user.bio %>
+          <p> <%= @service.user.bio %></p>
         <% end %>
         <% if @service.user.photo %>
           <%= @service.user.photo %>
         <% end %>
-        <% if @service.user.gender %>
-          <%= @service.user.gender %>
-        <% end %>
-        <% if @service.user.languages %>
-          <%= @service.user.languages %>
-        <% end %>
+
+        <button type="button" class="btn btn-outline-info">Edit Profile</button>
+
     </div>
+
+    <div class = "service-show-card">
+      <h3>Description</h3> <p><%= @service.description %></p>
+      <h3>Location</h3> <p><%= @service.location %></p>
+      <h3>Price</h3> <p>$<%= @service.price %></p>
+      <h3>Category</h3> <p><%= @service.category %></p>
+    </div>
+
   </div>
   <div class = "book-appointment">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
@@ -33,3 +39,4 @@
     <% end %>
   </div>
 </div>
+
