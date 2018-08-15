@@ -45,4 +45,3 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
   end
 end
-
