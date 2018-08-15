@@ -36,22 +36,21 @@
 //   p {
 //     font-size: 40px;
 //   }
-
-.service-show-page {
-  font-family: Arvo;
-
-}
-
   .title-show-page{
     text-align: center;
     font-weight: bolder;
     color: #92813d;
+    letter-spacing: 5px;
+
+
 
 }
 .service-show-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color: #716c55;
+  margin: 28px;
+  padding: 25px;
 
 }
 .service-show-card {

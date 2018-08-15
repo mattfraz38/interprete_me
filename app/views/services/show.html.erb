@@ -1,6 +1,7 @@
-<div class = "service-show-page">
 
-  <h1 class="title-show-page"><%= @service.title %></h1>
+
+  <h1 class="title-show-page"><%= @service.title %> <button type="button" class="btn btn-outline-info">Edit Service</button></h1>
+
 
   <div class = "service-show-container">
 
@@ -20,7 +21,7 @@
           <%= @service.user.photo %>
         <% end %>
 
-        <button type="button" class="btn btn-outline-info">Edit Profile</button>
+
 
     </div>
 
@@ -39,5 +40,4 @@
       <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
     <% end %>
   </div>
-</div>
 
