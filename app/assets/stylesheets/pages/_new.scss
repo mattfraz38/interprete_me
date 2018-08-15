@@ -1,7 +1,7 @@
-.create_service_card {
+.card_form {
   height: 650px;
   width: 500px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   background: white;
   padding: 15px;
   border-radius: 10px;
@@ -15,7 +15,7 @@
   margin-left: 10px;
 }
 
-.new_service_container {
+.card_container {
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 20px;
@@ -29,6 +29,6 @@
   background-image: url("new_service.jpg");
   background-position: center;
   background: cover;
-  height: 100vh;
+  height: 85vh;
   background-size: 100% 100%;
 }
