@@ -6,6 +6,7 @@
       <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
       <h4><%= @user.name %></h4>
       <p><strong><%= @user.gender %></strong></p>
+      <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-default nounderline" %>
 
     </div>
 
