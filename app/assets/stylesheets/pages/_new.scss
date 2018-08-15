@@ -1,26 +1,28 @@
 .create_service_card {
-  height: 450px;
+  height: 650px;
   width: 500px;
-  text-align: center;
+  margin: 50px auto 0 auto;
   background: white;
-  padding: 30px;
-  border-radius: 4px;
+  padding: 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: .9;
+}
+.form-control-label {
+  display: block;
+  text-align: left;
+  margin-left: 10px;
 }
 
-// .center_card_form {
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-.container {
+.new_service_container {
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 20px;
-  height: 80vh;
+  height: 10vh;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #new_background_image {
