@@ -1,6 +1,10 @@
 
 
-  <h1 class="title-show-page"><%= @service.title %> <button type="button" class="btn btn-outline-info">Edit Service</button></h1>
+  <h1 class="title-show-page"><%= @service.title %>
+    <% if current_user == @service.user %>
+      <button type="button" class="btn btn-outline-info">Edit Service</button>
+    <% end %>
+  </h1>
 
 
   <div class = "service-show-container">
