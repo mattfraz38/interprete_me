@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   def index
-    @services = Service.all
+    @services = policy_scope(Service)
   end
 
   def show
@@ -27,9 +27,11 @@ class ServicesController < ApplicationController
   end
 
   def edit
+    authorize @service
   end
 
   def update
+    authorize @service
   end
 
   def destroy
@@ -46,6 +48,5 @@ class ServicesController < ApplicationController
 
   def set_service
     @service = Service.find(params[:id])
-    authorize @service
   end
 end
