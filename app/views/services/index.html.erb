@@ -1,23 +1,23 @@
 
 <div class="container">
-     <h1 id="service-header">List of Services</h1>
+  <h1 id="service-header">List of Services</h1>
 
-  <div class="row">
+  <div class="grid">
 
     <% @services.each do |s| %>
-
-      <div class="col col-xs-12 col-sm-4">
         <%= link_to service_path(s) do  %>
           <div class="card">
-            <img src="" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
+            <div class = "picture">
+              <img src="https://picsum.photos/364/220?image=<%= s.id + 8%>" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
+            </div>
             <div class="card-category"><%= s.location %></div>
             <div class="card-description">
               <h2><%= s.title %></h2>
               <p><%= s.category %></p>
             </div>
+
           </div>
         <% end  %>
-      </div>
     <% end %>
   </div>
 </div>
