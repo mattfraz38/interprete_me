@@ -6,7 +6,10 @@ class ServicesController < ApplicationController
   end
 
   def show
+    # @service = policy_scope(Service.find(params[:id]))
     @appointment = Appointment.new
+    authorize @service
+
   end
 
   def new
