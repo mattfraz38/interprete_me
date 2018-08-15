@@ -2,6 +2,36 @@
   font-weight: bolder;
 }
 
+.info-content {
+  margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+
+.profile-container {
+  background: #bdc3c7;
+  background: linear-gradient(to right, #9fadbb, #606d75);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+  margin: 36px;
+  padding: 12px;
+  color: white;
+
+}
+
+.profile-avatar {
+  text-align: center;
+  margin: 15PX;
+  padding: 30px;
+}
+
+.profile-bio {
+    padding: 25px;
+    margin: 40px;
+=======
 .flex-box {
   display: flex;
   justify-content: space-around;
@@ -21,4 +51,5 @@
 .book-appointment {
   width: 400px;
   margin: 50px auto;
+
 }

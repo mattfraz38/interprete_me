@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 10px;
-  padding: 25px;
+  padding: 10px;
   border-radius: 3px;
   &:nth-of-type(even) {
   background: #66C6F3;
@@ -30,11 +30,3 @@ body {
   flex: 1;
 }
 
-.info-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  padding: 25px;
-  border-radius: 3px;
-}
