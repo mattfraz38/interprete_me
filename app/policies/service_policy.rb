@@ -9,6 +9,10 @@ class ServicePolicy < ApplicationPolicy
     return true
   end
 
+  def show?
+    return true
+  end
+
   def edit?
     current_user?
   end
