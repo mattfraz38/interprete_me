@@ -6,6 +6,7 @@ class ServicesController < ApplicationController
   end
 
   def show
+    @appointment = Appointment.new
   end
 
   def new
@@ -44,4 +45,3 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
   end
 end
-
