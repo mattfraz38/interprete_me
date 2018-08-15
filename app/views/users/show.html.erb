@@ -1,22 +1,28 @@
 
 <div class="info-container">
 
-  <div class="info-content">
-    <h3>Name <i class="fas fa-user"></i></h3>
-<%= @user.name %>
+  <div class="profile-container">
+    <div class="profile-avatar">
+      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+      <h4><%= @user.name %></h4>
+      <p><strong><%= @user.gender %></strong></p>
 
+    </div>
+
+
+    <div class="profile-bio">
+      <p> <strong>About Me</strong> </p>
+      <p><%= @user.bio %></p>
+    </div>
+
+
+  </div>
 </div>
 
-<div class="info-content">
-  <h3>About</h3>
-<%= @user.bio %>
-</div>
 
-<div class="info-content">
- <h3>Gender <i class="fas fa-transgender-alt"></i></h3>
-<%= @user.gender %>
-</div>
+ <div class="new-service-btn">
 
+<%= link_to "Create a Service", new_service_path %>
 </div>
 
 
@@ -51,5 +57,5 @@
 
   </div>
   <% end %>
-<%= link_to "Create a New Service", new_service_path %>
-</div>
+
+

@@ -18,10 +18,10 @@ User.delete_all
 
 puts "Deleted all items!"
 
-User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry the Hairy Fairy", bio: "Loves puppies, and flying high in the sky. Lactose intolerant. Open minded. Matt call me back, please.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
-User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt the Big Lat", bio: "Loves his protein shakes and heavy weights.", gender: "Male", languages: ["English", "Japanese"])
-User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Kat with the Nice Tat", bio: "Fight me.", gender: "Female", languages: ["English", "Tagalog"])
-User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George ", bio: "", gender: "Male", languages: ["English"])
+User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry the Hairy Fairy", bio: "Loves puppies, and flying high in the sky. Lactose intolerant. Open minded. Matt call me back, please. Time out, hold up. Hold up, sweetheart. Let's get it together before you wanna read. I don't have a sugar daddy, sweetheart. Everything that I've had, I've worked for, and I worked for to get and I've built myself. So you need to know that 100%. I don't have a sugar daddy.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
+User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt the Big Lat", bio: "Loves his protein shakes and heavy weights. So you need to know that 100%. I don't have a sugar daddy, I've never had a sugar daddy. If I wanted a sugar daddy, yes, I probably can go out and get one, because I AM WHAT? SICKENING.", gender: "Male", languages: ["English", "Japanese"])
+User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Kat with the Nice Tat", bio: "Fight me. So you need to know that 100%. I don't have a sugar daddy, I've never had a sugar daddy. If I wanted a sugar daddy, yes, I probably can go out and get one, because I AM WHAT? SICKENING.", gender: "Female", languages: ["English", "Tagalog"])
+User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George ", bio: "Whatever you proclaim as your identity here in the material realm is also your drag. You are not your religion. You are not your skin color. You are not your gender, your politics, your career, or your marital status. You are none of the superficial things that this world deems important. The real you is the energy force that created the entire universe!", gender: "Male", languages: ["English"])
 
 puts "Created #{User.count} users!"
 
