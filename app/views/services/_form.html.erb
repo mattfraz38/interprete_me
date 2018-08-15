@@ -1,5 +1,5 @@
 <%= simple_form_for [@service] do |f| %>
-  <%= f.input :title %>
+  <%= f.input :title, :input_html => { :wrap => :soft, :rows => 2} %>
   <%= f.input :category %>
   <%= f.input :location %>
   <%= f.input :language %>
