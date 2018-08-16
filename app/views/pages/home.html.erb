@@ -1,6 +1,7 @@
 <body id="home_background_image">
   <div class="card_container">
     <div class="card_form">
+
       <h1>Find an Adventure</h1>
       <%= form_tag services_path, method: :get do %>
         <%= text_field_tag :query,
@@ -8,6 +9,7 @@
         class: "form-control",
         placeholder: "Find an experience" %>
         <%= submit_tag :submit, class: 'btn btn-primary' %>
+
       <% end %>
       <!--  <#%= link_to services_path do %>
         <div class="btn btn-primary">Search</div>
@@ -15,3 +17,4 @@
     </div>
   </div>
 </body>
+
