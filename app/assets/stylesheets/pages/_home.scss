@@ -8,11 +8,17 @@
 }
 
 h1 {
-  color: black;
+  color: white;
 }
+
+p {
+  color: white
+}
+
 
 body {
   margin-bottom: 100px;
+
 }
 
 #service-header {
@@ -26,22 +32,22 @@ body {
 }
 
 .form-container {
-  color: rgb(234, 232, 232);
-  length: 300px;
-  width: 500px;
-  margin: auto;
-  background: rgb(99, 163, 242);
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: .9;
-  justify-content: center;
-  text-align: center;
+     color: white;
+    length: 300px;
+    width: 528px;
+    margin: 60px;
+    background: #0fc4ef;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(183, 180, 180, 0.79);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    justify-content: center;
+    text-align: center;
 }
 
 .form-container h1 {
-  color: rgb(234, 232, 232);
+  color: white;
   text-align: center;
   font-size: 18px;
 }
