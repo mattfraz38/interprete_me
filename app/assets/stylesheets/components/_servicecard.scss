@@ -49,3 +49,36 @@ body {
    margin-top: 10px;
  }
 }
+
+.user-service-card {
+ color: #2D383D;
+ background: $bg-white;  /* fallback for old browsers */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 3px;
+}
+
+.user-service-header {
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 3px;
+}
+
+.user-description-card {
+ color: #2D383D;
+ background: $bg-white;  /* fallback for old browsers */
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 3px;
+}
