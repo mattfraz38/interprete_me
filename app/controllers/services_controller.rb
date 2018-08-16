@@ -5,7 +5,7 @@ class ServicesController < ApplicationController
     skip_policy_scope
 
     if params[:query].present?
-      @services = Service.search_by_title_desc_cat(params[:query])
+      @services = Service.global_search(params[:query])
     else
       @services = Service.all
     end
