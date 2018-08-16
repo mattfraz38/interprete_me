@@ -47,6 +47,7 @@
   <div class = "user-service-card">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
       <div oninput="endDate()">
+        <%= f.input :start_day, :as => :string, required: true, :input_html => {:class => "datepicker"} %>
         <%= f.input :start_day, :as => :date, html5: true, :input_html => {:id => "start_day"} %>
         <div id = end_date>
 

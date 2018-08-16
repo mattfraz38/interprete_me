@@ -36,8 +36,11 @@
         <div class="service">
           <h2>DESCRIPTION </h2>
         </div>
-         <div class="service">
+        <div class="service">
           <h2>CITY</h2>
+        </div>
+        <div class="service">
+          <h2>DURATION</h2>
         </div>
     </div>
    <% @user.services.each do |s| %>
@@ -51,8 +54,15 @@
       <div class="service">
         <h3> <%= s.description%></h3>
       </div>
-       <div class="service">
+      <div class="service">
         <h3><%= s.location %></h3>
+      </div>
+      <div class="service">
+        <% if s.days >= 24 %>
+          <h3><%= s.days / 24 %> Day<%= s.days>47 ? 's' : '' %></h3>
+        <% else %>
+          <h3><%= s.days %> Hour<%= s.days>1 ? 's' : '' %></h3>
+        <% end %>
       </div>
     </div>
   <% end %>
@@ -74,13 +84,13 @@
         <h2>EXPERIENCE</h2>
       </div>
       <div class="service">
-        <h2>START DATE</h2>
+        <h2>START TIME</h2>
       </div>
        <div class="service">
-        <h2>END DATE</h2>
+        <h2>END TIME</h2>
       </div>
   </div>
-    <% @user.appointments.each do |a| %>
+    <% @user.appointments.order('start_day ASC').each do |a| %>
       <div class="card-service">
         <div class="service">
           <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
@@ -88,11 +98,11 @@
         <div class="service">
            <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
-        <div class="service">
-          <h3><%= a.start_day%></h3>
+        <div class="service date">
+          <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
         </div>
-         <div class="service">
-          <h3><%= a.start_day + a.service.days %></h3>
+         <div class="service date">
+          <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
         </div>
       </div>
     <% end %>
@@ -109,13 +119,13 @@
         <h2>EXPERIENCE</h2>
       </div>
       <div class="service">
-        <h2>START DATE</h2>
+        <h2>START TIME</h2>
       </div>
        <div class="service">
-        <h2>END DATE</h2>
+        <h2>END TIME</h2>
       </div>
   </div>
-    <% @user.service_appointments.each do |a| %>
+    <% @user.service_appointments.order('start_day ASC').each do |a| %>
       <div class="card-service">
         <div class="service">
           <h3><%= link_to a.user.name, user_path(a.user) %></h3>
@@ -123,16 +133,18 @@
         <div class="service">
            <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
-        <div class="service">
-          <h3><%= a.start_day%></h3>
+        <div class="service date">
+          <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
         </div>
-         <div class="service">
-          <h3><%= a.start_day + a.service.days %></h3>
+         <div class="service date">
+          <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
         </div>
       </div>
     <% end %>
+
   </div>
 </div>
+<div class="trapezium-show"></div>
 
 
 

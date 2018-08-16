@@ -18,5 +18,30 @@ body {
 #service-header {
   text-align: center;
   justify-content: center;
-  color: #141414;
+  color: #0fc4ef;
+}
+
+.form-search-input {
+  margin: 5px 0px;
+}
+
+.form-container {
+  color: rgb(234, 232, 232);
+  length: 300px;
+  width: 500px;
+  margin: auto;
+  background: rgb(99, 163, 242);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: .9;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-container h1 {
+  color: rgb(234, 232, 232);
+  text-align: center;
+  font-size: 18px;
 }
