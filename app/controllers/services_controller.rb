@@ -2,8 +2,13 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   def index
-    @services = policy_scope(Service)
+    skip_policy_scope
 
+    if params[:query].present?
+      @services = Service.search_by_title_desc_cat(params[:query])
+    else
+      @services = Service.all
+    end
   end
 
   def show
@@ -44,7 +49,7 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:description, :price, :location, :language,:category, :title)
+    params.require(:service).permit(:days, :description, :price, :location, :language,:category, :title, :photo, :photo_cache)
   end
 
   def set_service
