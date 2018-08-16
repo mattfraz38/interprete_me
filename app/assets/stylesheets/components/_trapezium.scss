@@ -33,6 +33,7 @@
 
 }
 
+
 .trapezium-homepage {
 
       position: fixed;
@@ -53,3 +54,20 @@
     border-bottom: 120px solid #41b8d68a;
     padding: 104px;
 }
+
+ .trapezium-bottom-right {
+  position: fixed;
+  background-color: #44BFDB;
+  background-size: cover;
+  -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+  border-bottom: 121px solid #44bfdc;
+  border-left: 120px solid transparent;
+  border-right: 89px solid transparent;
+  width: px;
+  margin: 100px;
+  }
+
