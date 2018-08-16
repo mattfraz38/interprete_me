@@ -15,6 +15,7 @@
   }
 
 .trapezium-show {
+
   position: fixed;
   background-color: #44BFDB;
   background-size: cover;
@@ -32,6 +33,28 @@
 
 }
 
+
+.trapezium-homepage {
+
+      position: fixed;
+    background-color: #2ad5ffb8;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    bottom: 0;
+    left: 0;
+    z-index: -7;
+    border-bottom: 160px solid #2fafce8a;
+    border-left: 169px solid transparent;
+    border-right: 94px solid transparent;
+    width: px;
+    margin: 115px;
+    height: 114px;
+    width: 326px;
+    border-bottom: 120px solid #41b8d68a;
+    padding: 104px;
+}
+
  .trapezium-bottom-right {
   position: fixed;
   background-color: #44BFDB;
@@ -47,3 +70,4 @@
   width: px;
   margin: 100px;
   }
+

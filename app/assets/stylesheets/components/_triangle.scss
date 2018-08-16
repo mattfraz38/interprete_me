@@ -1,0 +1,20 @@
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+  position: fixed;
+
+  h1 {
+  font-size: 60px;
+    padding: 20px;
+    margin: 139px;
+    position: fixed;
+    color: white;
+    }
+}
