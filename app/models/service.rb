@@ -1,6 +1,7 @@
 class Service < ApplicationRecord
   belongs_to :user
   has_many :appointments
+  mount_uploader :photo, PhotoUploader
   validates :user, :description, :price, :location, :title, :category, presence: :true
 
   include PgSearch
@@ -9,6 +10,4 @@ class Service < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
-
-
 end
