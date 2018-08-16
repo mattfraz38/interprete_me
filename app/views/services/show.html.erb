@@ -2,9 +2,6 @@
 
 <div class="service-show-background">
   <h1 class="title-show-page user-service-header"><%= @service.title %>
-    <% if current_user == @service.user %>
-      <button type="button" class="btn btn-outline-info">Edit Service</button>
-    <% end %>
   </h1>
 
   <div class = "user-description-card">
@@ -34,6 +31,7 @@
     </div>
 
     <div class = "service-show-profile">
+      <%= link_to user_path(@service.user) do %>
         <% if @service.user.name %>
           <h2><%= @service.user.name %></h2>
         <% end %>
@@ -47,20 +45,25 @@
         <% if @service.user.photo %>
           <%= @service.user.photo %>
         <% end %>
+      <% end %>
     </div>
   </div>
 
-  <div class = "user-service-card">
-    <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
-      <div onchange="endDate(<%= @service.days %>)">
-        <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
-        <div id = end_date>
+  <% if current_user == @service.user %>
+    <div class="btn-right"><button type="button" class="new-service-btn">Edit Service</button></div>
+  <% else %>
+    <div class = "user-service-card">
+      <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
+        <div onchange="endDate(<%= @service.days %>)">
+          <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
+          <div id = end_date>
 
+          </div>
         </div>
-      </div>
-      <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
-    <% end %>
-  </div>
+        <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 <div class="trapezium-bottom-right">

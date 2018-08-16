@@ -70,6 +70,7 @@
     }
 
 }
+
 .service-show-profile {
     background-color: #FFFEFF;
     border-radius: 3px;
@@ -79,8 +80,16 @@
     max-height: 100%;
     box-shadow: 2px 2px 2px #efeeee;
     text-align: center;
-
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: #44BFDC;
+    }
 }
+
+
 .book-appointment {
     color: #2D383D;
     width: 50%;
@@ -90,8 +99,8 @@
     box-shadow: 2px 2px 2px #efeeee;
     border-radius: 3px;
 }
-// .service-show-background {
-//   // background-color: #1761F3;
-//   background-color: #66c6f38c;
-// }
 
+.btn-right {
+  text-align: right;
+  margin-right: 200px;
+}
