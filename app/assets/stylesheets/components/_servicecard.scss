@@ -1,53 +1,51 @@
 body {
-  background: white;
+ background: white;
 }
 .service-container{
-  margin: 26px;
+ margin: 26px;
 
 }
 
 .card-service-header {
-  color: #181818;
-  background: rgb(10,10,10);  /* fallback for old browsers */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 3px;
+ color: #2D383D;
+ background: $bg-blue;  /* fallback for old browsers */
+ color: white;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 3px;
 }
 
 .card-service {
-  color: #181818;
-  background: $foam-green;  /* fallback for old browsers */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 3px;
-  &:nth-of-type(even) {
-  background: #66C6F3;
-  color: white;
+ color: #2D383D;
+ background: $bg-white;  /* fallback for old browsers */
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 10px;
+ padding: 10px;
+ border-radius: 3px;
 
-  }
+
 }
 
 .card-service h1 {
-  font-size: bolder;
+ font-size: bolder;
+}
 
+.card-service a {
+ text-decoration: none;
 }
 
 .service {
-  flex: 1;
-  text-align: center;
-  padding: 0 10px;
-  h2 {
-    margin-top: 10px;
-  }
-  h3 {
-    margin-top: 10px;
-  }
+ flex: 1;
+ text-align: center;
+ h2 {
+   margin-top: 10px;
+ }
+ h3 {
+   margin-top: 10px;
+ }
 }
-

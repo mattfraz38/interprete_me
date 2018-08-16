@@ -1,4 +1,10 @@
+<div class=“edit-profile-btn”>
+  <%= link_to "Create an Experience", new_service_path %>
+</div>
 
+
+<% if @user == current_user %>
+<% else %>
 <div class="info-container">
 
   <div class="profile-container">
@@ -14,12 +20,12 @@
   </div>
 </div>
 
-
+<% end %>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Offered Experiences (<%= @user.services.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting (<%= @user.service_appointments.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Requested Appointments (<%= @user.appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">My Listings (<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">My Attendees (<%= @user.service_appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">My Bookings (<%= @user.appointments.count %>)</button>
 </div>
 
 <!-- Tab content -->
