@@ -18,9 +18,9 @@
 <% end %>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">My Listings (<%= @user.services.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">My Attendees (<%= @user.service_appointments.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">My Bookings (<%= @user.appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen"><%= @user.name.match(/^\w*/) %>'s Listings (<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')"><%= @user.name.match(/^\w*/) %>'s Attendees (<%= @user.service_appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')"><%= @user.name.match(/^\w*/) %>'s Bookings (<%= @user.appointments.count %>)</button>
 </div>
 
 <!-- Tab content -->
