@@ -1,10 +1,14 @@
 
+
+<div class="edit-profile-btn">
+<%= link_to "Create an Experience", new_service_path %>
+</div>
 <div class="info-container">
 
-  <div class="profile-container">
+<!--   <div class="profile-container">
     <div class="profile-avatar">
       <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
-      <h4><%= @user.name %></h4>
+      <h4><%#= @user.name %></h4>
       <p><strong><%= @user.gender %></strong></p>
     </div>
     <div class="profile-bio">
@@ -13,21 +17,26 @@
     </div>
   </div>
 </div>
-
+ -->
 
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">Offered Experiences (<%= @user.services.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">Appointments Hosting (<%= @user.service_appointments.count %>)</button>
-  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">Requested Appointments (<%= @user.appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen">My Listings(<%= @user.services.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'hosting-appointments')">My Attendees (<%= @user.service_appointments.count %>)</button>
+  <button class="tablinks" onclick="openCity(event, 'attending-appointments')">My Bookings (<%= @user.appointments.count %>)</button>
 </div>
+
+</div>
+
+
+
+
+
 
 <!-- Tab content -->
 <div id="services-hosted" class="tabcontent">
   <div class="service-container">
-    <div class="new-service-btn">
-      <%= link_to "Create an Experience", new_service_path %>
-    </div>
+
     <div class="card-service-header">
         <div class="service">
           <h2>EXPERIENCE<h2>
@@ -82,10 +91,10 @@
     <% @user.appointments.each do |a| %>
       <div class="card-service">
         <div class="service">
-          <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
+          <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
         <div class="service">
-           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+           <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
         </div>
         <div class="service">
           <h3><%= a.start_day%></h3>
@@ -98,10 +107,11 @@
   </div>
 </div>
 
+
 <div id="hosting-appointments" class="tabcontent">
   <div class="card-service-header">
     <div class="service">
-      <h2>ATTENDEE NAME<h2>
+      <h2>NAME<h2>
     </div>
     <div class="service">
       <h2>EXPERIENCE</h2>
@@ -117,10 +127,10 @@
     <% @user.service_appointments.each do |a| %>
       <div class="card-service">
         <div class="service">
-          <h3><%= link_to a.user.name, user_path(a.user) %></h3>
+          <h3><%= link_to a.service.title, service_path(a.service) %></h3>
         </div>
         <div class="service">
-           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+           <h3><%= link_to a.user.name, user_path(a.user) %></h3>
         </div>
         <div class="service">
           <h3><%= a.start_day%></h3>
@@ -130,7 +140,7 @@
         </div>
       </div>
     <% end %>
-  </div>
+      </div>
 </div>
 
 
