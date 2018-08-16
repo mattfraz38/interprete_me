@@ -5,8 +5,16 @@ class ServicesController < ApplicationController
   def index
     skip_policy_scope
 
-    if params[:query].present?
-      @services = Service.global_search(params[:query])
+    if params[:location].present? || params[:title].present? #check if all are present
+      # @services = Service.global_search(params[:query])
+      # @services = Service.location_search(params[:location]) if params[:location].present?
+      # params[:title].present? && params[:location].present? ? @services = @services.title_desc_search(params[:title]) : @services = Service.title_desc_search(params[:title])
+      if params[:location].present?
+        @services = Service.location_search(params[:location])
+        @services = @services.title_desc_search(params[:title]) if params[:title].present?
+      else
+        @services = Service.title_desc_search(params[:title])
+      end
     else
       @services = Service.all
     end
