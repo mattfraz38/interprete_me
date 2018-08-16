@@ -9,13 +9,11 @@ class ServicesController < ApplicationController
   def show
     @appointment = Appointment.new
     authorize @service
-
   end
 
   def new
     @service = Service.new
     authorize @service
-
   end
 
   def create
