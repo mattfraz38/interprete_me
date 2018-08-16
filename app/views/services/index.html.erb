@@ -8,12 +8,21 @@
         <%= link_to service_path(s) do  %>
           <div class="card">
             <div class = "picture">
-              <img src="https://picsum.photos/364/220?image=<%= s.id - Service.first.id + 10 %>" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
+              <% if s.photo? %>
+                <%= cl_image_tag s.photo(), width: 220, :crop=>"fill" %>
+              <% else %>
+                <img src="https://picsum.photos/364/220?image=<%= s.id - Service.first.id + 10 %>" class="https://kitt.lewagon.com/placeholder/users/alex-felix">
+              <% end %>
             </div>
             <div class="card-category"><%= s.location %></div>
             <div class="card-description">
               <h2><%= s.title %></h2>
               <p><%= s.category %></p>
+            </div>
+            <div class="top-right">
+              <h1>$<%= s.price %></h1>
+
+              <h3><%= s.days %> day<%= s.days>1 ? 's' : '' %></h3>
             </div>
 
           </div>

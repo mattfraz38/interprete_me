@@ -26,22 +26,22 @@ User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George
 puts "Created #{User.count} users!"
 
 
-Service.create!(category: "Night Life", title: "Club!", description: "Go to the club", price: 20, location: "Tokyo", user_id: User.all.sample.id, language: "German")
-Service.create!(category: "Day Life", title: "Swim with the sharks", description: "Go swimming with the sharks!", price: 23030, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Adventure", title: "Dive in the ocean", description: "Dive down deep", price: 900, location: "Tokyo", user_id: User.all.sample.id, language: "English")
-Service.create!(category: "Sports", title: "Play baseball", description: "Play with the Giants!", price: 15, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Sports", title: "See soccer", description: "See Honda", price: 10, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Food", title: "Wine tasting", description: "Drink. A lot.", price: 11000, location: "Tokyo", user_id: User.all.sample.id, language: "English")
-Service.create!(category: "Relax", title: "Spa", description: "Relax", price: 4, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Adventure", title: "Fishing", description: "Catch the big one", price: 50, location: "Tokyo", user_id: User.all.sample.id, language: "Tagalog")
-Service.create!(category: "Night Life", title: "Club!", description: "Go to the club", price: 20, location: "Tokyo", user_id: User.all.sample.id, language: "German")
-Service.create!(category: "Day Life", title: "Swim with the sharks", description: "Go swimming with the sharks!", price: 23030, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Adventure", title: "Dive in the ocean", description: "Dive down deep", price: 900, location: "Tokyo", user_id: User.all.sample.id, language: "English")
-Service.create!(category: "Sports", title: "Play baseball", description: "Play with the Giants!", price: 15, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Sports", title: "See soccer", description: "See Honda", price: 10, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Food", title: "Wine tasting", description: "Drink. A lot.", price: 11000, location: "Tokyo", user_id: User.all.sample.id, language: "English")
-Service.create!(category: "Relax", title: "Spa", description: "Relax", price: 4, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
-Service.create!(category: "Adventure", title: "Fishing", description: "Catch the big one", price: 50, location: "Tokyo", user_id: User.all.sample.id, language: "Tagalog")
+Service.create!(days: 2, category: "Night Life", title: "Club!", description: "Go to the club", price: 20, location: "Tokyo", user_id: User.all.sample.id, language: "German")
+Service.create!(days: 1, category: "Day Life", title: "Swim with the sharks", description: "Go swimming with the sharks!", price: 23030, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 1, category: "Adventure", title: "Dive in the ocean", description: "Dive down deep", price: 900, location: "Tokyo", user_id: User.all.sample.id, language: "English")
+Service.create!(days: 1, category: "Sports", title: "Play baseball", description: "Play with the Giants!", price: 15, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 2, category: "Sports", title: "See soccer", description: "See Honda", price: 10, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 2, category: "Food", title: "Wine tasting", description: "Drink. A lot.", price: 11000, location: "Tokyo", user_id: User.all.sample.id, language: "English")
+Service.create!(days: 3, category: "Relax", title: "Spa", description: "Relax", price: 4, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 7, category: "Adventure", title: "Fishing", description: "Catch the big one", price: 50, location: "Tokyo", user_id: User.all.sample.id, language: "Tagalog")
+Service.create!(days: 1, category: "Night Life", title: "Club!", description: "Go to the club", price: 20, location: "Tokyo", user_id: User.all.sample.id, language: "German")
+Service.create!(days: 2, category: "Day Life", title: "Swim with the sharks", description: "Go swimming with the sharks!", price: 23030, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 3, category: "Adventure", title: "Dive in the ocean", description: "Dive down deep", price: 900, location: "Tokyo", user_id: User.all.sample.id, language: "English")
+Service.create!(days: 4, category: "Sports", title: "Play baseball", description: "Play with the Giants!", price: 15, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 5, category: "Sports", title: "See soccer", description: "See Honda", price: 10, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 1, category: "Food", title: "Wine tasting", description: "Drink. A lot.", price: 11000, location: "Tokyo", user_id: User.all.sample.id, language: "English")
+Service.create!(days: 1, category: "Relax", title: "Spa", description: "Relax", price: 4, location: "Tokyo", user_id: User.all.sample.id, language: "Japanese")
+Service.create!(days: 2, category: "Adventure", title: "Fishing", description: "Catch the big one", price: 50, location: "Tokyo", user_id: User.all.sample.id, language: "Tagalog")
 
 puts "Created #{Service.count} services!"
 
