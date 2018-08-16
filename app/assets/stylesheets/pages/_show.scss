@@ -44,8 +44,16 @@
   }
 }
 
-
 .nounderline {
   text-decoration: none !important;
 }
 
+.end_date {
+  margin-bottom: 10px;
+}
+
+.end_date_text {
+  display: block;
+  font-weight: bold;
+  padding-left: 10px;
+}
