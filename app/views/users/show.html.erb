@@ -1,151 +1,146 @@
 <% if @user == current_user %>
 <% else %>
-<div class="info-container">
-
-  <div class="profile-container">
-    <div class="profile-avatar">
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
-      <h4><%= @user.name %></h4>
-      <p><strong><%= @user.gender %></strong></p>
-    </div>
-    <div class="profile-bio">
-      <p> <strong>About Me</strong> </p>
-      <p><%= @user.bio %></p>
+  <div class="info-container">
+    <div class="profile-container">
+      <div class="profile-avatar">
+        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+        <h4><%= @user.name %></h4>
+        <p><strong><%= @user.gender %></strong></p>
+      </div>
+      <div class="profile-bio">
+        <p> <strong>About Me</strong> </p>
+        <p><%= @user.bio %></p>
+      </div>
     </div>
   </div>
-</div>
-
 <% end %>
-
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen"><%= @user.name.match(/^\w*/) %>'s Listings (<%= @user.services.count %>)</button>
   <button class="tablinks" onclick="openCity(event, 'hosting-appointments')"><%= @user.name.match(/^\w*/) %>'s Attendees (<%= @user.service_appointments.count %>)</button>
   <button class="tablinks" onclick="openCity(event, 'attending-appointments')"><%= @user.name.match(/^\w*/) %>'s Bookings (<%= @user.appointments.count %>)</button>
 </div>
-
 <!-- Tab content -->
 <div id="services-hosted" class="tabcontent">
   <div class="service-container">
     <div class="card-service-header">
-        <div class="service">
-          <h2>EXPERIENCE<h2>
-        </div>
-        <div class="service">
-          <h2>PRICE</h2>
-        </div>
-        <div class="service">
-          <h2>DESCRIPTION </h2>
-        </div>
-        <div class="service">
-          <h2>CITY</h2>
-        </div>
-        <div class="service">
-          <h2>DURATION</h2>
-        </div>
-    </div>
-   <% @user.services.each do |s| %>
-    <div class="card-service">
       <div class="service">
-        <h3><%= link_to s.title, service_path(s) %></h3>
-      </div>
-      <div class="service">
-         <h3>$<%= s.price %></h3>
-      </div>
-      <div class="service">
-        <h3> <%= s.description%></h3>
-      </div>
-      <div class="service">
-        <h3><%= s.location %></h3>
-      </div>
-      <div class="service">
-        <% if s.days >= 24 %>
-          <h3><%= s.days / 24 %> Day<%= s.days>47 ? 's' : '' %></h3>
-        <% else %>
-          <h3><%= s.days %> Hour<%= s.days>1 ? 's' : '' %></h3>
+        <h2>EXPERIENCE
+          <h2>
+          </div>
+          <div class="service">
+            <h2>PRICE</h2>
+          </div>
+          <div class="service">
+            <h2>DESCRIPTION </h2>
+          </div>
+          <div class="service">
+            <h2>CITY</h2>
+          </div>
+          <div class="service">
+            <h2>DURATION</h2>
+          </div>
+        </div>
+        <% @user.services.each do |s| %>
+          <div class="card-service">
+            <div class="service">
+              <h3><%= link_to s.title, service_path(s) %></h3>
+            </div>
+            <div class="service">
+              <h3>$<%= s.price %></h3>
+            </div>
+            <div class="service">
+              <h3> <%= s.description%></h3>
+            </div>
+            <div class="service">
+              <h3><%= s.location %></h3>
+            </div>
+            <div class="service">
+              <% if s.days >= 24 %>
+                <h3><%= s.days / 24 %> Day<%= s.days>47 ? 's' : '' %></h3>
+              <% else %>
+                <h3><%= s.days %> Hour<%= s.days>1 ? 's' : '' %></h3>
+              <% end %>
+            </div>
+          </div>
         <% end %>
+        <div class="new-service-btn center">
+          <%= link_to "Create an Experience", new_service_path %>
+        </div>
       </div>
     </div>
-  <% end %>
-  <div class="new-service-btn center">
-    <%= link_to "Create an Experience", new_service_path %>
-  </div>
-</div>
-
-
-</div>
-
-<div id="attending-appointments" class="tabcontent">
-  <div class = "service-container">
-    <div class="card-service-header">
-      <div class="service">
-        <h2>HOST NAME<h2>
-      </div>
-      <div class="service">
-        <h2>EXPERIENCE</h2>
-      </div>
-      <div class="service">
-        <h2>START TIME</h2>
-      </div>
-       <div class="service">
-        <h2>END TIME</h2>
-      </div>
-  </div>
-    <% @user.appointments.order('start_day ASC').each do |a| %>
-      <div class="card-service">
-        <div class="service">
-          <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
+    <div id="attending-appointments" class="tabcontent">
+      <div class = "service-container">
+        <div class="card-service-header">
+          <div class="service">
+            <h2>HOST NAME
+              <h2>
+              </div>
+              <div class="service">
+                <h2>EXPERIENCE</h2>
+              </div>
+              <div class="service">
+                <h2>START TIME</h2>
+              </div>
+              <div class="service">
+                <h2>END TIME</h2>
+              </div>
+            </div>
+            <% @user.appointments.order('start_day ASC').each do |a| %>
+              <div class="card-service">
+                <div class="service">
+                  <h3><%= link_to a.service.user.name, user_path(a.service.user) %></h3>
+                </div>
+                <div class="service">
+                  <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+                </div>
+                <div class="service date">
+                  <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
+                </div>
+                <div class="service date">
+                  <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
-        <div class="service">
-           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
-        </div>
-        <div class="service date">
-          <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
-        </div>
-         <div class="service date">
-          <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div id="hosting-appointments" class="tabcontent">
-  <div class="service-container">
-    <div class="card-service-header">
-      <div class="service">
-        <h2>ATTENDEE NAME<h2>
-      </div>
-      <div class="service">
-        <h2>EXPERIENCE</h2>
-      </div>
-      <div class="service">
-        <h2>START TIME</h2>
-      </div>
-       <div class="service">
-        <h2>END TIME</h2>
-      </div>
-  </div>
-    <% @user.service_appointments.order('start_day ASC').each do |a| %>
-      <div class="card-service">
-        <div class="service">
-          <h3><%= link_to a.user.name, user_path(a.user) %></h3>
-        </div>
-        <div class="service">
-           <h3><%= link_to a.service.title, service_path(a.service) %></h3>
-        </div>
-        <div class="service date">
-          <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
-        </div>
-         <div class="service date">
-          <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
-        </div>
-      </div>
-    <% end %>
-
-  </div>
-</div>
-<div class="trapezium-show"></div>
-
-
-
-
+        <div id="hosting-appointments" class="tabcontent">
+          <div class="service-container">
+            <div class="card-service-header">
+              <div class="service">
+                <h2>ATTENDEE NAME
+                  <h2>
+                  </div>
+                  <div class="service">
+                    <h2>EXPERIENCE</h2>
+                  </div>
+                  <div class="service">
+                    <h2>START TIME</h2>
+                  </div>
+                  <div class="service">
+                    <h2>END TIME</h2>
+                  </div>
+                  <div class="service">
+                    <h2>Edit or Delete</h2>
+                  </div>
+                </div>
+                <% @user.service_appointments.order('start_day ASC').each do |a| %>
+                  <div class="card-service">
+                    <div class="service">
+                      <h3><%= link_to a.user.name, user_path(a.user) %></h3>
+                    </div>
+                    <div class="service">
+                      <h3><%= link_to a.service.title, service_path(a.service) %></h3>
+                    </div>
+                    <div class="service date">
+                      <h3><%= a.start_day.strftime('%b %d, %y %R')%></h3>
+                    </div>
+                    <div class="service date">
+                      <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
+                    </div>
+                    <div class="service">
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="trapezium-show"></div>
