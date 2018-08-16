@@ -1,13 +1,12 @@
 <div class="service-show-background">
 
-  <h1 class="title-show-page"><%= @service.title %>
+  <h1 class="title-show-page card-service-header"><%= @service.title %>
     <% if current_user == @service.user %>
       <button type="button" class="btn btn-outline-info">Edit Service</button>
     <% end %>
   </h1>
 
-
-  <div class = "service-show-container">
+  <div class = "card-service">
 
     <div class = "service-show-profile">
 
@@ -38,7 +37,7 @@
 
   </div>
 
-  <div class = "book-appointment">
+  <div class = "card-service">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
       <div id = "end_date", oninput="endDate()">
         <%= f.input :start_day, :as => :date, html5: true, :input_html => {:id => "start_day"} %>
