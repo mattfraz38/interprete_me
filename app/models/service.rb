@@ -1,5 +1,6 @@
 class Service < ApplicationRecord
   belongs_to :user
   has_many :appointments
-  validates :user, :description, :price, :location, :title, :category, presence: :true
+  mount_uploader :photo, PhotoUploader
+  validates :user, :description, :price, :location, :title, :days, presence: :true
 end
