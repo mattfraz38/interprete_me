@@ -33,6 +33,7 @@
       <h3>Description</h3> <p><%= @service.description %></p>
       <h3>Location</h3> <p><%= @service.location %></p>
       <h3>Price</h3> <p>$<%= @service.price %></p>
+      <h3>Days</h3> <p id = "days"><%= @service.days %></p>
       <h3>Category</h3> <p><%= @service.category %></p>
     </div>
 
@@ -40,8 +41,11 @@
 
   <div class = "book-appointment">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
-      <div id = "end_date", oninput="endDate()">
+      <div oninput="endDate()">
         <%= f.input :start_day, :as => :date, html5: true, :input_html => {:id => "start_day"} %>
+        <div id = end_date>
+
+        </div>
       </div>
       <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
     <% end %>
