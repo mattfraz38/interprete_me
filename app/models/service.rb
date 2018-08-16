@@ -5,8 +5,8 @@ class Service < ApplicationRecord
   validates :user, :description, :price, :location, :title, :category, presence: :true
 
   include PgSearch
-  pg_search_scope :search_by_title_desc_cat,
-    against: [ :title, :description, :category ],
+  pg_search_scope :global_search,
+    against: [ :title, :description, :category, :location, :language ],
   using: {
     tsearch: { prefix: true }
   }
