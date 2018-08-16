@@ -13,9 +13,11 @@
     <%= f.input :photo_cache, as: :hidden %>
   </div>
 
-  <div class="form-actions center">
-    <%= f.button :submit, "Sign up!" %>
+  <div class="form-actions center formactionsbtn">
+    <%= submit_tag :submit, class: 'btn btn-primary'  %>
   </div>
 <% end %>
+
+
 <%= render "devise/shared/links" %>
 </div>

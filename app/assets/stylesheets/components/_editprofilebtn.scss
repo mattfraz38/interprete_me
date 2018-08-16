@@ -1,0 +1,24 @@
+.edit-profile-btn {
+    color: white;
+    padding: 19px;
+    border-radius: 3px;
+    font-weight: bold;
+    background: #cccccc;
+    transition: background 0.3s ease;
+    text-align: start;
+    /* margin-left: 46px; */
+    width: 230px;
+    margin-left: 50px;
+    margin-bottom: 23px;
+    height: 65px;
+}
+.edit-profile-btn:hover {
+  opacity: 1;
+  background: #6AD58B;
+
+  color: white;
+    a {
+      text-decoration: none;
+    }
+}
+
