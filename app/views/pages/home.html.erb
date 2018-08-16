@@ -1,21 +1,27 @@
-<body id="home_background_image">
-  <div class="card_container">
-    <div class="card_form">
-      <h1>Find an Adventure</h1>
-      <%= form_tag services_path, method: :get do %>
-        <%= text_field_tag :location,
-        params[:location],
-        class: "form-control form-search-input",
-        placeholder: "Find a location" %>
-        <%= text_field_tag :title,
-        params[:title],
-        class: "form-control form-search-input",
-        placeholder: "Find an experience" %>
-        <%= submit_tag :submit, class: 'btn btn-primary' %>
-      <% end %>
-      <!--  <#%= link_to services_path do %>
-        <div class="btn btn-primary">Search</div>
-      <#% end %> -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="card-container">
+        <div class="form-container">
+          <h1>Be brave. Take risks. Nothing can substitute experience.</h1>
+          <%= form_tag services_path, method: :get do %>
+            <%= label_tag "Location" %>
+            <%= text_field_tag :location,
+          params[:location],
+          class: "form-control form-search-input",
+          placeholder: "" %>
+            <%= label_tag "Find an experience" %>
+            <%= text_field_tag :title,
+          params[:title],
+          class: "form-control form-search-input",
+          placeholder: "" %>
+            <%= submit_tag :Search, class: 'home-button' %>
+          <% end %>
+          <!--  <#%= link_to services_path do %>
+          <div class="btn btn-primary">Search</div>
+        <#% end %> -->
+        </div>
+      </div>
     </div>
   </div>
-</body>
+</div>
