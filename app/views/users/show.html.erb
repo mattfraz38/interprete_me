@@ -25,9 +25,6 @@
 <!-- Tab content -->
 <div id="services-hosted" class="tabcontent">
   <div class="service-container">
-    <div class="new-service-btn">
-      <%= link_to "Create an Experience", new_service_path %>
-    </div>
     <div class="card-service-header">
         <div class="service">
           <h2>EXPERIENCE<h2>
@@ -58,27 +55,30 @@
       </div>
     </div>
   <% end %>
+  <div class="new-service-btn center">
+    <%= link_to "Create an Experience", new_service_path %>
+  </div>
 </div>
 
 
 </div>
 
 <div id="attending-appointments" class="tabcontent">
-  <div class="card-service-header">
-    <div class="service">
-      <h2>HOST NAME<h2>
-    </div>
-    <div class="service">
-      <h2>EXPERIENCE</h2>
-    </div>
-    <div class="service">
-      <h2>START DATE</h2>
-    </div>
-     <div class="service">
-      <h2>END DATE</h2>
-    </div>
-</div>
-  <div class="service-container">
+  <div class = "service-container">
+    <div class="card-service-header">
+      <div class="service">
+        <h2>HOST NAME<h2>
+      </div>
+      <div class="service">
+        <h2>EXPERIENCE</h2>
+      </div>
+      <div class="service">
+        <h2>START DATE</h2>
+      </div>
+       <div class="service">
+        <h2>END DATE</h2>
+      </div>
+  </div>
     <% @user.appointments.each do |a| %>
       <div class="card-service">
         <div class="service">
@@ -91,7 +91,7 @@
           <h3><%= a.start_day%></h3>
         </div>
          <div class="service">
-          <h3><%= a.end_day %></h3>
+          <h3><%= a.start_day + a.service.days %></h3>
         </div>
       </div>
     <% end %>
@@ -99,21 +99,21 @@
 </div>
 
 <div id="hosting-appointments" class="tabcontent">
-  <div class="card-service-header">
-    <div class="service">
-      <h2>ATTENDEE NAME<h2>
-    </div>
-    <div class="service">
-      <h2>EXPERIENCE</h2>
-    </div>
-    <div class="service">
-      <h2>START DATE</h2>
-    </div>
-     <div class="service">
-      <h2>END DATE</h2>
-    </div>
-</div>
   <div class="service-container">
+    <div class="card-service-header">
+      <div class="service">
+        <h2>ATTENDEE NAME<h2>
+      </div>
+      <div class="service">
+        <h2>EXPERIENCE</h2>
+      </div>
+      <div class="service">
+        <h2>START DATE</h2>
+      </div>
+       <div class="service">
+        <h2>END DATE</h2>
+      </div>
+  </div>
     <% @user.service_appointments.each do |a| %>
       <div class="card-service">
         <div class="service">
@@ -126,7 +126,7 @@
           <h3><%= a.start_day%></h3>
         </div>
          <div class="service">
-          <h3><%= a.end_day %></h3>
+          <h3><%= a.start_day + a.service.days %></h3>
         </div>
       </div>
     <% end %>
