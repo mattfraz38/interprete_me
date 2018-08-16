@@ -40,8 +40,9 @@
 
   <div class = "book-appointment">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
-      <%= f.input :start_day, as: :date, html5: true %>
-      <%= f.input :end_day, as: :date, html5: true %>
+      <div id = "end_date", oninput="endDate()">
+        <%= f.input :start_day, :as => :date, html5: true, :input_html => {:id => "start_day"} %>
+      </div>
       <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
     <% end %>
   </div>

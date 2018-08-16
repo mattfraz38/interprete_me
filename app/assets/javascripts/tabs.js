@@ -20,3 +20,9 @@ function openCity(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
+
+function endDate() {
+  var start_date = document.getElementById("start_day").value;
+  var end_date = document.getElementById(end_date);
+  end_date.insertAdjacentHTML('beforeend',`End Date: <%= ${start_date} + @service.days %>`)
+};
