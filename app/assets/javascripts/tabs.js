@@ -20,16 +20,3 @@ function openCity(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
-
-function addMinutes(date, minutes) {
-    return new Date(date.getTime() + minutes*60000);
-}
-
-function endDate() {
-  var start_date = new Date(document.getElementById("start_day").value);
-  var days = document.getElementById('days').innerText;
-  var new_date = new Date(start_date.getTime() + days*86400000);
-
-  var end_date = document.getElementById("end_date");
-  end_date.innerHTML = `<div class="end_date_text"> End Date: </div>${new_date.toDateString()}`
-};

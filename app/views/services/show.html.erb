@@ -1,6 +1,6 @@
 
-<div class="service-show-background">
 
+<div class="service-show-background">
   <h1 class="title-show-page user-service-header"><%= @service.title %>
     <% if current_user == @service.user %>
       <button type="button" class="btn btn-outline-info">Edit Service</button>
@@ -21,7 +21,12 @@
 
         <div>
           <h3>Price</h3> <p>$<%= @service.price %></p>
-          <h3>Days</h3> <p id = "days"><%= @service.days %></p>
+          <h3>Duration</h3>
+          <% if @service.days>=24 %>
+            <p><%= @service.days / 24 %> Day<%= @service.days>=48 ? 's' : '' %></p>
+          <% else %>
+            <p><%= @service.days %> Hour<%= @service.days>1 ? 's' : '' %></p>
+          <% end %>
         </div>
 
       </div>
@@ -47,9 +52,8 @@
 
   <div class = "user-service-card">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
-      <div oninput="endDate()">
-        <%= f.input :start_day, :as => :string, required: true, :input_html => {:class => "datepicker"} %>
-        <%= f.input :start_day, :as => :date, html5: true, :input_html => {:id => "start_day"} %>
+      <div onchange="endDate(<%= @service.days %>)">
+        <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
         <div id = end_date>
 
         </div>
@@ -57,7 +61,6 @@
       <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
     <% end %>
   </div>
-
 </div>
 
 <div class="trapezium-bottom-right">
