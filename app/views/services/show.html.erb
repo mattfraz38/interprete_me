@@ -1,15 +1,33 @@
 <div class="service-show-background">
 
-  <h1 class="title-show-page card-service-header"><%= @service.title %>
+  <h1 class="title-show-page user-service-header"><%= @service.title %>
     <% if current_user == @service.user %>
       <button type="button" class="btn btn-outline-info">Edit Service</button>
     <% end %>
   </h1>
 
-  <div class = "card-service">
+  <div class = "user-description-card">
+    <div class = "service-show-card">
+      <div>
+        <h3>Description</h3> <p><%= @service.description %></p>
+      </div>
+
+      <div class="flexbox">
+        <div>
+          <h3>Location</h3> <p><%= @service.location %></p>
+          <h3>Category</h3> <p><%= @service.category %></p>
+        </div>
+
+        <div>
+          <h3>Price</h3> <p>$<%= @service.price %></p>
+          <h3>Days</h3> <p id = "days"><%= @service.days %></p>
+        </div>
+
+      </div>
+
+    </div>
 
     <div class = "service-show-profile">
-
         <% if @service.user.name %>
           <h2><%= @service.user.name %></h2>
         <% end %>
@@ -23,22 +41,10 @@
         <% if @service.user.photo %>
           <%= @service.user.photo %>
         <% end %>
-
-
-
     </div>
-
-    <div class = "service-show-card">
-      <h3>Description</h3> <p><%= @service.description %></p>
-      <h3>Location</h3> <p><%= @service.location %></p>
-      <h3>Price</h3> <p>$<%= @service.price %></p>
-      <h3>Days</h3> <p id = "days"><%= @service.days %></p>
-      <h3>Category</h3> <p><%= @service.category %></p>
-    </div>
-
   </div>
 
-  <div class = "card-service">
+  <div class = "user-service-card">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
       <div oninput="endDate()">
         <%= f.input :start_day, :as => :string, required: true, :input_html => {:class => "datepicker"} %>

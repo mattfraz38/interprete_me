@@ -50,7 +50,15 @@
   padding: 25px;
 
 }
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+}
+
 .service-show-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
     width: 45%;
     text-align: center;
     background-color: #FFFEFF;
@@ -66,7 +74,7 @@
     background-color: #FFFEFF;
     border-radius: 3px;
     border-top-left-radius: 3px;
-    padding: -10px;
+    padding: 15px;
     width: 40%;
     max-height: 100%;
     box-shadow: 2px 2px 2px #efeeee;
@@ -82,12 +90,8 @@
     box-shadow: 2px 2px 2px #efeeee;
     border-radius: 3px;
 }
-.service-show-background {
-  // background-color: #1761F3;
-  background-color: #66c6f38c;
-}
-
-// .appointment-button {
-//   background-color: #FEF7C1;
-//   color: #2D383D;
+// .service-show-background {
+//   // background-color: #1761F3;
+//   background-color: #66c6f38c;
 // }
+
