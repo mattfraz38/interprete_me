@@ -52,8 +52,16 @@
   margin-bottom: 10px;
 }
 
-.end_date_text {
-  display: block;
-  font-weight: bold;
-  padding-left: 10px;
+#end_date{
+  text-align: left;
+  margin-bottom: 20px;
+ .end_date_text {
+    display: block;
+
+    font-weight: bold;
+    padding-left: 8px;
+  }
+  p {
+    margin-left: 11px;
+  }
 }
