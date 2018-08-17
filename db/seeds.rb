@@ -20,7 +20,7 @@ puts "Deleted all items!"
 
 User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry Nevins", bio: "I'm a big fan of photography nd would love to share my knowledge and experience  with others. I also Loves puppies and flying high in the sky. Lactose intolerant. Open minded.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
 User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt Frazier", bio: "Love the outdoors and all things fitness.", gender: "Male", languages: ["English", "Japanese"])
-User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Katrina Arioa", bio: "I enjoy traveling, cooking and meeting other people. I'd love to share my cooking knowledge and experience.", gender: "Female", languages: ["English", "Tagalog"])
+User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Katrina Ariola", bio: "I enjoy traveling, cooking and meeting other people. I'd love to share my cooking knowledge and experience.", gender: "Female", languages: ["English", "Tagalog"])
 User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George Walden", bio: "Whatever you proclaim as your identity here in the material realm is also your drag. You are not your religion. You are not your skin color. You are not your gender, your politics, your career, or your marital status. You are none of the superficial things that this world deems important. The real you is the energy force that created the entire universe!", gender: "Male", languages: ["English"])
 
 DEFAUT_PASSWORD = 'password'
