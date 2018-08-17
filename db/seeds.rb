@@ -23,15 +23,15 @@ User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt 
 User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Katrina Ariola", bio: "I enjoy traveling, cooking and meeting other people. I'd love to share my cooking knowledge and experience.", gender: "Female", languages: ["English", "Tagalog"])
 User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George Walden", bio: "Whatever you proclaim as your identity here in the material realm is also your drag. You are not your religion. You are not your skin color. You are not your gender, your politics, your career, or your marital status. You are none of the superficial things that this world deems important. The real you is the energy force that created the entire universe!", gender: "Male", languages: ["English"])
 
-DEFAUT_PASSWORD = 'password'
-100.times do |i|
-  User.create! email: "user_#{i}@example.org",
-               password: DEFAUT_PASSWORD,
-               name: "User #{i}",
-               bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-               gender: "User gender",
-               languages: "User languages"
-end
+# DEFAUT_PASSWORD = 'password'
+# 100.times do |i|
+#   User.create! email: "user_#{i}@example.org",
+#                password: DEFAUT_PASSWORD,
+#                name: "User #{i}",
+#                bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+#                gender: "User gender",
+#                languages: "User languages"
+# end
 
 
 # pi = ProductImage.create!(:product => product)
