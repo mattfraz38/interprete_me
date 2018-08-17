@@ -1,4 +1,19 @@
-<h1>Edit</h1>
-<p>Find me in app/views/services/edit.html.erb</p>
+<div class="card_container">
+  <h1 class = "blue">Edit Experience</h1>
+  <div class="card_form">
+    <%= simple_form_for [@service], method: :patch do |f| %>
+      <%= f.input :title, :input_html => { :wrap => :soft, :rows => 2} %>
+      <%= f.input :category %>
+      <%= f.input :location %>
+      <%= f.input :language %>
+      <%= f.input :description %>
+      <%= f.input :days %>
+      <%= f.input :price %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit "Submit" %>
+    <% end %>
 
-<%= render "form" %>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+<div class="card_container">
+  <h1 class = "blue">Edit Appointment</h1>
+  <div class="card_form">
+    <div class = "user-service-card">
+      <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
+        <div onchange="endDate(<%= @service.days %>)">
+          <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
+          <div id = end_date>
+
+          </div>
+        </div>
+        <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
