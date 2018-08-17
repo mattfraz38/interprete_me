@@ -10,3 +10,25 @@
     <%= alert %>
   </div>
 <% end %>
+
+<% if flash[:confirm] %>
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= flash[:confirm] %>
+  </div>
+<% end %>
+
+<% if flash[:noconfirm] %>
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= flash[:noconfirm] %>
+  </div>
+<% end %>
+
+<% if flash[:create] %>
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= flash[:create] %>
+  </div>
+<% end %>
+

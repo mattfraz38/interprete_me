@@ -36,6 +36,7 @@ class ServicesController < ApplicationController
     @service.user = current_user
     if @service.save
       redirect_to user_path(current_user)
+      flash[:create] = "Experience has been Created!"
     else
       render :new
     end
