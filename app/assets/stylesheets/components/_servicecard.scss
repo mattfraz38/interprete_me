@@ -56,7 +56,7 @@ body {
 
 
 .user-service-card {
- color: #2D383D; /* fallback for old browsers */
+ color: #15758c; /* fallback for old browsers */
  display: flex;
  justify-content: center;
  align-items: center;
@@ -99,3 +99,16 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+
+
+.show-dot {
+
+   height: 7px;
+    width: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+}
+

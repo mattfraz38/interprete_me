@@ -4,25 +4,27 @@
   <div class = "user-description-card">
     <div class = "service-show-card">
       <div>
-        <h3>Description</h3>
+          <p>
+          <% if @service.days>=24 %>
+            <%= @service.days / 24 %> Day<%= @service.days>=48 ? 's' : '' %>
+          <% else %>
+          <%= @service.days %> Hour<%= @service.days>1 ? 's' : '' %>
+          <% end %>
+          <span class="show-dot"></span>
+          <%= @service.location %>
+          <span class="show-dot"></span>
+          <%= @service.category %>
+           <h2>$<%= @service.price %></h2>
         <p><%= @service.description %></p>
       </div>
       <div class="flexbox">
         <div class="description-card">
-          <h3>Location</h3>
-          <p><%= @service.location %></p>
-          <h3>Category</h3>
-          <p><%= @service.category %></p>
+
+
         </div>
         <div>
-          <h3>Price</h3>
-          <p>$<%= @service.price %></p>
-          <h3>Duration</h3>
-          <% if @service.days>=24 %>
-            <p><%= @service.days / 24 %> Day<%= @service.days>=48 ? 's' : '' %></p>
-          <% else %>
-            <p><%= @service.days %> Hour<%= @service.days>1 ? 's' : '' %></p>
-          <% end %>
+
+
         </div>
       </div>
     </div>
@@ -54,11 +56,11 @@
     <div class = "user-service-card">
       <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
         <div onchange="endDate(<%= @service.days %>)">
-          <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
+          <%= f.input :start_day, :label => "When would you like to go?", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
           <div id = end_date>
           </div>
         </div>
-        <div class="center"><%= f.submit "Book Appointment!", :class => "service-button" %></div>
+        <div class="center"><%= f.submit "Make a booking", :class => "service-button" %></div>
       <% end %>
     </div>
   <% end %>
