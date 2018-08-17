@@ -45,7 +45,9 @@
     <% end %>
   </div>
   <% if current_user == @service.user %>
-    <div class="btn-right"><button type="button" class="new-service-btn">Edit Service</button></div>
+    <%= link_to edit_user_registration_path(current_user) do %>
+      <div class="center"><button type="button" class="service-button">Edit Service</button></div>
+    <% end %>
   <% else %>
     <div class = "user-service-card">
       <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>

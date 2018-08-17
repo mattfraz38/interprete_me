@@ -22,4 +22,39 @@
   color: white;
   padding: 7px 22px;
   border-radius: 4px;
+
+}
+
+
+.new-service-btn{
+  color: #71A3EC;
+  border: 2px solid #71A3EC;
+  padding: 7px 22px;
+  border-radius: 4px;
+  // font-weight: bold;
+  opacity: 1;
+  width: 24%;
+  height: 50px;
+  margin: 0 auto;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  background-color: white;
+  a {
+    text-decoration: none;
+    color: #71A3EC;
+  }
+}
+.new-service-btn:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: #71A3EC;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.formactionsbtn {
+  font-weight: bolder;
+  background-color: pink;
 }
