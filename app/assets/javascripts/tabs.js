@@ -20,3 +20,4 @@ function openCity(evt, tabName) {
 }
 
 document.getElementById("defaultOpen").click();
+

@@ -10,7 +10,9 @@ class AppointmentsController < ApplicationController
     if @appointment.valid?
       @appointment.save
       redirect_to user_path(@user)
+      flash[:confirm] = "Experience has been booked!"
     else
+      flash[:noconfirm] = "Experience has been booked!"
       @appointment = Appointment.new
       redirect_to service_path(@service)
     end
