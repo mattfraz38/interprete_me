@@ -53,7 +53,7 @@
   <% else %>
     <div class = "user-service-card">
       <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
-        <div onchange="endDate(<%= @service.days %>)">
+        <div onchange="window.endDate(<%= @service.days %>)">
           <%= f.input :start_day, :label => "When would you like to go?", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
           <div id = end_date>
           </div>
