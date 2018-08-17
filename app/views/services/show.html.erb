@@ -1,5 +1,5 @@
 <div class="service-show-background">
-  <h1 class="title-show-page user-service-header"><%= @service.title %>
+  <h1 class="title-show-page user-service-header"><%= @service.title.split.map(&:capitalize).join(' ') %>
   </h1>
   <div class = "user-description-card">
     <div class = "service-show-card">
@@ -45,7 +45,11 @@
     <% end %>
   </div>
   <% if current_user == @service.user %>
-    <div class="btn-right"><button type="button" class="new-service-btn">Edit Service</button></div>
+    <div class="flexbox">
+      <%= link_to edit_service_path(@service) do %>
+        <div class="center"><button type="button" class="service-button">Edit Experience</button></div>
+      <% end %>
+    </div>
   <% else %>
     <div class = "user-service-card">
       <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
@@ -58,6 +62,10 @@
       <% end %>
     </div>
   <% end %>
+  <div class="trapezium-bottom-right">
 </div>
+</div>
+
 <div class="trapezium-bottom-right">
 </div>
+

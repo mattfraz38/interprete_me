@@ -17,12 +17,16 @@
             <div class="card-category"><%= s.location %></div>
             <div class="card-description">
               <h2><%= s.title %></h2>
+              <h5><%= s.user.name %></h5>
               <p><%= s.category %></p>
             </div>
             <div class="top-right">
               <h1>$<%= s.price %></h1>
-
-              <h3><%= s.days %> day<%= s.days>1 ? 's' : '' %></h3>
+              <% if s.days >= 24 %>
+                <h3><%= s.days / 24 %> Day<%= s.days>47 ? 's' : '' %></h3>
+              <% else %>
+                <h3><%= s.days %> Hour<%= s.days>1 ? 's' : '' %></h3>
+              <% end %>
             </div>
 
           </div>

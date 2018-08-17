@@ -18,20 +18,11 @@ User.delete_all
 
 puts "Deleted all items!"
 
-User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry Nevins", bio: "I'm a big fan of photography nd would love to share my knowledge and experience  with others. I also Loves puppies and flying high in the sky. Lactose intolerant. Open minded.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
+User.create!(email: "larrysworld@gmail.com", password: "IloveMatt", name: "Larry Nevins", bio: "I'm a big fan of photography and would love to share my knowledge and experience with others. I also love puppies and flying high in the sky. Lactose intolerant. Open minded.", gender: "Male", languages: ["English", "German", "Spanish", "Italian", "French", "Finnish", "Swedish"])
 User.create!(email: "mattattack@gmail.com", password: "Pokemon123", name: "Matt Frazier", bio: "Love the outdoors and all things fitness.", gender: "Male", languages: ["English", "Japanese"])
 User.create!(email: "kitkat@gmail.com", password: "Whatupppppp", name: "Katrina Ariola", bio: "I enjoy traveling, cooking and meeting other people. I'd love to share my cooking knowledge and experience.", gender: "Female", languages: ["English", "Tagalog"])
 User.create!(email: "georgewss@gmail.com", password: "HelloWorld", name: "George Walden", bio: "Whatever you proclaim as your identity here in the material realm is also your drag. You are not your religion. You are not your skin color. You are not your gender, your politics, your career, or your marital status. You are none of the superficial things that this world deems important. The real you is the energy force that created the entire universe!", gender: "Male", languages: ["English"])
 
-# DEFAUT_PASSWORD = 'password'
-# 100.times do |i|
-#   User.create! email: "user_#{i}@example.org",
-#                password: DEFAUT_PASSWORD,
-#                name: "User #{i}",
-#                bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-#                gender: "User gender",
-#                languages: "User languages"
-# end
 
 
 # pi = ProductImage.create!(:product => product)
@@ -83,6 +74,7 @@ puts Service.create!(remote_photo_url: relax_img, days: 24, category: "Relax", t
 puts Service.create!(remote_photo_url: sports_img, days: 2, category: "Sports", title: "Go to a Cricket game", description: "Want to learn about a strange game called cricket? Come with me and learn while watching a game in India from a former pro!", price: 20, location: "Anantapur", user_id: User.all.sample.id)
 puts Service.create!(remote_photo_url: food_and_drink_img, days: 8, category: "Food&Drink", title: "Rome food tour", description: "Do you like Rome? Do you like food? I'll take you on a food tour through Rome", price: 50, location: "Rome", user_id: User.all.sample.id)
 puts Service.create!(remote_photo_url: art_img, days: 10, category: "Art", title: "Tokyo street art", description: "Japan is very clean right? I'll show you the true face of street art in Tokyo", price: 15, location: "Tokyo", user_id: User.all.sample.id)
+
 
 
 puts "Created #{Service.count} services!"
