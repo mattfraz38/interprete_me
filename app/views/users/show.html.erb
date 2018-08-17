@@ -1,7 +1,11 @@
 <div class="info-container">
   <div class="profile-container">
     <div class="profile-avatar">
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+      <% if @user.photo? %>
+        <%= cl_image_tag @user.photo(), width: 200, height: 150, crop: :thumb, class: "avatar-bordered" %>
+      <% else %>
+        <%= image_tag "http://kitt.lewagon.com/placeholder/users/ringochico", class: "avatar-bordered" %>
+      <% end %>
       <h4><%= @user.name %></h4>
       <p><strong><%= @user.gender %></strong></p>
     </div>
@@ -47,7 +51,7 @@
               <h3>$<%= s.price %></h3>
             </div>
             <div class="service">
-              <h5> <%= s.description%></h5>
+              <h4> <%= s.description%></h4>
             </div>
             <div class="service">
               <h3><%= s.location %></h3>
