@@ -1,6 +1,6 @@
 class Service < ApplicationRecord
   belongs_to :user
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   validates :user, :description, :price, :location, :title, :category, presence: :true
 

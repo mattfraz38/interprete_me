@@ -55,6 +55,12 @@
   justify-content: space-around;
 }
 
+// .service-show-background {
+//   h1 {
+//     color: #71A3EC;
+//   }
+// }
+
 .service-show-card {
     color: rgb(234, 232, 232);
     margin-top: 20px;
@@ -71,11 +77,14 @@
       text-decoration: underline;
     }
 
+
+
 }
 
 .service-show-profile {
     background-color: #FFFEFF;
-    color: rgb(99, 163, 242);
+    // color: rgb(99, 163, 242);
+    // color: #71A3EC;
     // background: rgb(121, 202, 229);
     border-radius: 3px;
     border-top-left-radius: 3px;
@@ -85,11 +94,14 @@
     box-shadow: 2px 2px 2px #efeeee;
     text-align: center;
 
-    a, p  {
+    a, p {
+
       text-decoration: none;
       color: #71A3EC;
     }
+
     a:hover{
+
       color: rgb(43, 100, 191);
     }
      .service-show-profile:hover {
@@ -97,7 +109,6 @@
     }
 
     border: 2px rgb(99, 163, 242) solid;
-
 }
 
 

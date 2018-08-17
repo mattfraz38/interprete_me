@@ -46,13 +46,14 @@ class ServicesController < ApplicationController
   end
 
   def update
+    @service.update(service_params)
     authorize @service
+    redirect_to user_path(current_user)
   end
 
   def destroy
     @service.destroy
-
-    redirect_to services_path
+    redirect_to user_path(current_user)
   end
 
   private

@@ -12,6 +12,6 @@ function endDate(hours) {
   var start_date = new Date(document.querySelector(".datepicker").value);
   var new_date = new Date(start_date.getTime() + hours*3600000);
   var end_date = document.getElementById("end_date");
-  end_date.innerHTML = `<div class="end_date_text"> End Time </div><p>${formatDate(new_date)}</p>`
+  end_date.innerHTML = `<div class="end_date_text"> End Time </div><p class = "black">${formatDate(new_date)}</p>`
 
 };

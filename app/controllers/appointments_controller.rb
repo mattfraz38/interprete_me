@@ -17,7 +17,16 @@ class AppointmentsController < ApplicationController
   end
 
   def edit
+    @service = Service.find(params[:service_id])
+    @appointment = Appointment.find(params[:id])
+  end
 
+  def update
+    @service = Service.find(params[:service_id])
+    @appointment = Appointment.find(params[:id])
+    @appointment[:confirmed] = true
+    @appointment.save
+    redirect_to user_path(current_user)
   end
 
   def destroy
@@ -25,13 +34,13 @@ class AppointmentsController < ApplicationController
     service = @appointment.service
     @appointment.destroy
 
-    redirect_to user_path(@user)
+    redirect_to user_path(current_user)
   end
 
   private
 
   def appointment_params
-    params.require(:appointment).permit(:start_day, :end_day)
+    params.require(:appointment).permit(:start_day, :end_day, :confirmed)
   end
 
   # def set_appointment

@@ -18,7 +18,7 @@ class ServicePolicy < ApplicationPolicy
   end
 
   def update?
-    current_user?
+    return true
   end
 
   def destroy?
