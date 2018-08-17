@@ -71,3 +71,39 @@
   margin: 100px;
   }
 
+
+  .trapezium-new {
+    background-color: #5edfff;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    bottom: 0;
+    left: 0;
+    /* z-index: -10; */
+    border-bottom: 325px solid #44bfdc;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    width: 100px;
+    margin: 20px;
+
+  }
+
+  .trapezium-text {
+
+    margin-left: 25px;
+    h1 {
+      color: #44bfdc;
+    }
+
+    h3 {
+      color: gray;
+    }
+
+
+
+  }
+
+// .trapezium-container {
+//   display: flex;
+
+// }
