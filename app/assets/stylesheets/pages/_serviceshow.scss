@@ -56,12 +56,14 @@
 }
 
 .service-show-card {
+    color: rgb(234, 232, 232);
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
     width: 45%;
     text-align: center;
-    background-color: #FFFEFF;
+    // background-color: #FFFEFF;
+    background: rgb(99, 163, 242);
     max-height: 100%;
     border-radius: 3px;
     box-shadow: 2px 2px 2px #efeeee;
@@ -72,6 +74,8 @@
 }
 .service-show-profile {
     background-color: #FFFEFF;
+    color: rgb(99, 163, 242);
+    // background: rgb(121, 202, 229);
     border-radius: 3px;
     border-top-left-radius: 3px;
     padding: 15px;
@@ -79,6 +83,7 @@
     max-height: 100%;
     box-shadow: 2px 2px 2px #efeeee;
     text-align: center;
+    border: 2px rgb(99, 163, 242) dotted;
 
 }
 .book-appointment {

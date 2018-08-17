@@ -1,26 +1,25 @@
-
-
 <div class="service-show-background">
   <h1 class="title-show-page user-service-header"><%= @service.title %>
     <% if current_user == @service.user %>
       <button type="button" class="btn btn-outline-info">Edit Service</button>
     <% end %>
   </h1>
-
   <div class = "user-description-card">
     <div class = "service-show-card">
       <div>
-        <h3>Description</h3> <p><%= @service.description %></p>
+        <h3>Description</h3>
+        <p><%= @service.description %></p>
       </div>
-
       <div class="flexbox">
-        <div>
-          <h3>Location</h3> <p><%= @service.location %></p>
-          <h3>Category</h3> <p><%= @service.category %></p>
+        <div class="description-card">
+          <h3>Location</h3>
+          <p><%= @service.location %></p>
+          <h3>Category</h3>
+          <p><%= @service.category %></p>
         </div>
-
         <div>
-          <h3>Price</h3> <p>$<%= @service.price %></p>
+          <h3>Price</h3>
+          <p>$<%= @service.price %></p>
           <h3>Duration</h3>
           <% if @service.days>=24 %>
             <p><%= @service.days / 24 %> Day<%= @service.days>=48 ? 's' : '' %></p>
@@ -28,41 +27,34 @@
             <p><%= @service.days %> Hour<%= @service.days>1 ? 's' : '' %></p>
           <% end %>
         </div>
-
       </div>
-
     </div>
-
     <div class = "service-show-profile">
-        <% if @service.user.name %>
-          <h2><%= @service.user.name %></h2>
-        <% end %>
-         <% if @service.user.gender %>
-          <p> <%= @service.user.gender %></p>
-        <% end %>
-        <h4>About Me</h4>
-        <% if @service.user.bio %>
-          <p> <%= @service.user.bio %></p>
-        <% end %>
-        <% if @service.user.photo %>
-          <%= @service.user.photo %>
-        <% end %>
+      <% if @service.user.name %>
+        <h2><%= @service.user.name %></h2>
+      <% end %>
+      <% if @service.user.gender %>
+        <p> <%= @service.user.gender %></p>
+      <% end %>
+      <h4>About Me</h4>
+      <% if @service.user.bio %>
+        <p> <%= @service.user.bio %></p>
+      <% end %>
+      <% if @service.user.photo %>
+        <%= @service.user.photo %>
+      <% end %>
     </div>
   </div>
-
   <div class = "user-service-card">
     <%= simple_form_for @appointment, url: service_appointments_path(@service) do |f|%>
       <div onchange="endDate(<%= @service.days %>)">
-        <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
+        <%= f.input :start_day, :as => :string, required: true, :input_html => {:class => "datepicker"} %>
         <div id = end_date>
-
         </div>
       </div>
-      <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
+      <div class="center"><%= f.submit "Book Appointment!", :class => "home-button" %></div>
     <% end %>
   </div>
 </div>
-
 <div class="trapezium-bottom-right">
-
 </div>
