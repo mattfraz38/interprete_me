@@ -1,19 +1,17 @@
-<% if @user == current_user %>
-<% else %>
-  <div class="info-container">
-    <div class="profile-container">
-      <div class="profile-avatar">
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
-        <h4><%= @user.name %></h4>
-        <p><strong><%= @user.gender %></strong></p>
-      </div>
-      <div class="profile-bio">
-        <p> <strong>About Me</strong> </p>
-        <p><%= @user.bio %></p>
-      </div>
+<div class="info-container">
+  <div class="profile-container">
+    <div class="profile-avatar">
+      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
+      <h4><%= @user.name %></h4>
+      <p><strong><%= @user.gender %></strong></p>
+    </div>
+    <div class="profile-bio">
+      <p> <strong>About Me</strong> </p>
+      <p><%= @user.bio %></p>
     </div>
   </div>
-<% end %>
+</div>
+
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'services-hosted')" id="defaultOpen"><%= @user.name.match(/^\w*/) %>'s Listings (<%= @user.services.count %>)</button>
   <button class="tablinks" onclick="openCity(event, 'hosting-appointments')"><%= @user.name.match(/^\w*/) %>'s Attendees (<%= @user.service_appointments.count %>)</button>
@@ -49,7 +47,7 @@
               <h3>$<%= s.price %></h3>
             </div>
             <div class="service">
-              <h3> <%= s.description%></h3>
+              <h5> <%= s.description%></h5>
             </div>
             <div class="service">
               <h3><%= s.location %></h3>
@@ -59,6 +57,14 @@
                 <h3><%= s.days / 24 %> Day<%= s.days>47 ? 's' : '' %></h3>
               <% else %>
                 <h3><%= s.days %> Hour<%= s.days>1 ? 's' : '' %></h3>
+              <% end %>
+            </div>
+            <div class="link-icons">
+              <%= link_to service_path(s), method: :delete, data: {confirm: "Delete this experience?"} do %>
+                <i class="fas fa-times"></i>
+              <% end %>
+              <%= link_to edit_service_path(s) do %>
+                <i class="fas fa-edit"></i>
               <% end %>
             </div>
           </div>
@@ -84,6 +90,9 @@
               <div class="service">
                 <h2>END TIME</h2>
               </div>
+              <div class="service">
+                <h2>CONFIRMATION</h2>
+              </div>
             </div>
             <% @user.appointments.order('start_day ASC').each do |a| %>
               <div class="card-service">
@@ -99,6 +108,13 @@
                 <div class="service date">
                   <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
                 </div>
+                  <div class="service">
+                    <% if a.confirmed == false %>
+                      <h4 class="black">Pending</h4>
+                    <% else %>
+                      <h4 class="green">Appointment Confirmed</h4>
+                    <% end %>
+                  </div>
               </div>
             <% end %>
           </div>
@@ -120,7 +136,7 @@
                     <h2>END TIME</h2>
                   </div>
                   <div class="service">
-                    <h2>Edit or Delete</h2>
+                    <h2>CONFIRMATION</h2>
                   </div>
                 </div>
                 <% @user.service_appointments.order('start_day ASC').each do |a| %>
@@ -138,6 +154,16 @@
                       <h3><%= (a.start_day + a.service.days*3600).strftime('%b %d, %y %R') %></h3>
                     </div>
                     <div class="service">
+                      <% if a.confirmed == false %>
+                        <%= link_to service_appointment_path(a.service, a), method: :patch do %>
+                          <h4 class="green">Confirm</h4>
+                        <% end %>
+                        <%= link_to service_appointment_path(a.service, a), method: :delete, data: {confirm: "Reject this appointment?"} do %>
+                          <h4 class="red">Reject</h4>
+                        <% end %>
+                      <% else %>
+                        <h4 class="green">Appointment Confirmed</h4>
+                      <% end %>
                     </div>
                   </div>
                 <% end %>
