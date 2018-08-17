@@ -39,7 +39,7 @@
   .title-show-page{
     text-align: center;
     font-weight: bolder;
-    color: #2D383D;
+    color: #1a95b3;
     letter-spacing: 5px;
 }
 .service-show-container {
@@ -62,19 +62,20 @@
 // }
 
 .service-show-card {
-    color: rgb(234, 232, 232);
+    color: gray;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
     width: 45%;
     text-align: center;
     // background-color: #FFFEFF;
-    background: rgb(99, 163, 242);
+    background: #44bfdd;
     max-height: 100%;
     border-radius: 3px;
     box-shadow: 2px 2px 2px #efeeee;
     h3 {
       text-decoration: underline;
+      color: white;
     }
 
 
@@ -97,7 +98,7 @@
     a, p {
 
       text-decoration: none;
-      color: #71A3EC;
+      color: #44bfdd;
     }
 
     a:hover{
@@ -108,7 +109,7 @@
       background-color: #71A3EC;
     }
 
-    border: 2px rgb(99, 163, 242) solid;
+    border: 2px #44bfdda6 solid;
 }
 
 
