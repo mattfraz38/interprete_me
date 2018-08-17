@@ -38,7 +38,9 @@ end
 puts "Created #{User.count} users!"
 
 
-Service.create!(days: 4, category: "Day Life", title: "Explore the city", description: "Visiting New York and don't know what to do? I'll be your tour guide for the day!", price: 10, location: "New York", user_id: User.all.sample.id)
+
+Service.create!(photo: '../app/assets/images/intlogo.jpg', days: 4, category: "Day Life", title: "Explore the city", description: "Visiting New York and don't know what to do? I'll be your tour guide for the day!", price: 10, location: "New York", user_id: User.all.sample.id)
+puts "Service created!"
 Service.create!(days: 3, category: "Night Life", title: "Bar-hopping", description: "Come with me and I'll show you all the good side street locations to drink, eat, and meet other people.", price: 20, location: "Tokyo", user_id: User.all.sample.id)
 Service.create!(days: 8, category: "Adventure", title: "Dive in the ocean", description: "I'm an experienced diver and would love to help others learn and experience the mysteries of the deep blue sea!", price: 50, location: "Australia", user_id: User.all.sample.id)
 Service.create!(days: 1, category: "Relax", title: "Treat yourelf! Get a massage!", description: "Experienced massge therapist looking to make some extra money!", price: 15, location: "Australia", user_id: User.all.sample.id)

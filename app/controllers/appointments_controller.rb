@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
       redirect_to user_path(@user)
     else
       @appointment = Appointment.new
-      render :new
+      redirect_to service_path(@service)
     end
   end
 
