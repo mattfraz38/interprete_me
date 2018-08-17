@@ -13,13 +13,13 @@
     <%= f.input :photo_cache, as: :hidden %>
   </div>
 
-  <div class="larry-search-button">
-    <%= f.button :submit, "Sign Up" %>
+  <div class="larry-button-group">
+    <%= f.button :submit, "Sign up", class: "larry-search-button" %>
   </div>
+  <%= render "devise/shared/links" %>
 <% end %>
 
 
-<%= render "devise/shared/links" %>
 </div>
 
 <div class="trapezium-forum"></div>
