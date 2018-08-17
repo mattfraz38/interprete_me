@@ -1,18 +1,21 @@
 <div class="card_container">
-  <div class="card_form">
-    <h2 class = "blue">Edit Experience</h2>
-    <%= simple_form_for [@service], method: :patch do |f| %>
-      <%= f.input :title %>
-      <%= f.input :description, as: :text, autofocus: true, :input_html => {:style => 'width: 100%', :rows => 3} %>
-      <%= f.input :location %>
-      <%= f.input :days, :label => "Duration (Hours)", required: true, input_html: { min: '0'} %>
-      <%= f.input :price, :label => "Price ($)", input_html: { min: '0'} %>
-      <%= f.input :category, :collection => ["Day Life", "Night Life", "Adventure", "Relax", "Sports", "Food&Drink", "Art", "Education"] %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit "Submit" %>
-    <% end %>
-
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1 class = "blue">Edit Experience</h1>
+      <div class="card_form">
+        <%= simple_form_for [@service], method: :patch do |f| %>
+          <%= f.input :title, :input_html => { :wrap => :soft, :rows => 2} %>
+          <%= f.input :category %>
+          <%= f.input :location %>
+          <%= f.input :language %>
+          <%= f.input :description %>
+          <%= f.input :days %>
+          <%= f.input :price %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "Submit", :class => "service-button" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
-
