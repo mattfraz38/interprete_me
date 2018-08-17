@@ -85,16 +85,18 @@
     box-shadow: 2px 2px 2px #efeeee;
     text-align: center;
 
-    a {
+    a, p  {
       text-decoration: none;
-      color: black;
+      color: #71A3EC;
     }
     a:hover{
-      color: #44BFDC;
+      color: rgb(43, 100, 191);
+    }
+     .service-show-profile:hover {
+      background-color: #71A3EC;
     }
 
-    border: 2px rgb(99, 163, 242) dotted;
-
+    border: 2px rgb(99, 163, 242) solid;
 
 }
 

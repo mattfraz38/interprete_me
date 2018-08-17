@@ -27,12 +27,11 @@
       </div>
     </div>
     <div class = "service-show-profile">
-
       <%= link_to user_path(@service.user) do %>
         <% if @service.user.name %>
           <h2><%= @service.user.name %></h2>
         <% end %>
-         <% if @service.user.gender %>
+        <% if @service.user.gender %>
           <p> <%= @service.user.gender %></p>
         <% end %>
         <h4>About Me</h4>
@@ -45,7 +44,6 @@
       <% end %>
     </div>
   </div>
-
   <% if current_user == @service.user %>
     <div class="btn-right"><button type="button" class="new-service-btn">Edit Service</button></div>
   <% else %>
@@ -54,14 +52,12 @@
         <div onchange="endDate(<%= @service.days %>)">
           <%= f.input :start_day, :label => "Start Time", :as => :string, required: true, :input_html => {:class => "datepicker"} %>
           <div id = end_date>
-
           </div>
         </div>
-        <div class="center"><%= f.submit "Book Appointment!", :class => "btn submit-btn" %></div>
+        <div class="center"><%= f.submit "Book Appointment!", :class => "service-button" %></div>
       <% end %>
     </div>
   <% end %>
-
 </div>
 <div class="trapezium-bottom-right">
 </div>
