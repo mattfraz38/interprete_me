@@ -22,10 +22,31 @@
     height: 35%;
     margin-left: 42%;
     border-style: solid;
+    font-size: 15px;
   }
 
 .larry-search-button:hover {
     color:  #9cd1de;
     opacity: .5;
     border-style: solid;
+}
+
+
+.larry-signup {
+    border-radius: 4px;
+    padding: 0px 4px;
+    color: transparent;
+    opacity: 1;
+    width: 13%;
+    height: 35%;
+    margin-left: 42%;
+    border-style: solid;
+  }
+
+.larry-signup:hover {
+    color:  transparent;
+    opacity: .5;
+    border-style: solid;
+
+
 }

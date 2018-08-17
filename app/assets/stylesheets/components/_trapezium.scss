@@ -103,6 +103,22 @@
 
   }
 
+
+  .trapezium-forum {
+ background-color: #64DFFD;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    bottom: 0;
+    left: 0;
+    z-index: -5;
+    border-bottom: 150px solid #4BBFDB;
+    border-left: 160px solid transparent;
+    border-right: 150px solid transparent;
+    width: 96px;
+    margin: 28px;
+  }
+
 // .trapezium-container {
 //   display: flex;
 
