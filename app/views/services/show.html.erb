@@ -1,23 +1,22 @@
-
-
 <div class="service-show-background">
   <h1 class="title-show-page user-service-header"><%= @service.title %>
   </h1>
-
   <div class = "user-description-card">
     <div class = "service-show-card">
       <div>
-        <h3>Description</h3> <p><%= @service.description %></p>
+        <h3>Description</h3>
+        <p><%= @service.description %></p>
       </div>
-
       <div class="flexbox">
-        <div>
-          <h3>Location</h3> <p><%= @service.location %></p>
-          <h3>Category</h3> <p><%= @service.category %></p>
+        <div class="description-card">
+          <h3>Location</h3>
+          <p><%= @service.location %></p>
+          <h3>Category</h3>
+          <p><%= @service.category %></p>
         </div>
-
         <div>
-          <h3>Price</h3> <p>$<%= @service.price %></p>
+          <h3>Price</h3>
+          <p>$<%= @service.price %></p>
           <h3>Duration</h3>
           <% if @service.days>=24 %>
             <p><%= @service.days / 24 %> Day<%= @service.days>=48 ? 's' : '' %></p>
@@ -25,12 +24,10 @@
             <p><%= @service.days %> Hour<%= @service.days>1 ? 's' : '' %></p>
           <% end %>
         </div>
-
       </div>
-
     </div>
-
     <div class = "service-show-profile">
+
       <%= link_to user_path(@service.user) do %>
         <% if @service.user.name %>
           <h2><%= @service.user.name %></h2>
@@ -64,8 +61,7 @@
       <% end %>
     </div>
   <% end %>
+
 </div>
-
 <div class="trapezium-bottom-right">
-
 </div>

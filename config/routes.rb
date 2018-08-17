@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :services do
-    resources :appointments, only: :create
+    resources :appointments, only: [ :create, :edit, :update, :destroy ]
   end
 
   get "/my_services", to: 'user_services#index'
+
 
 end

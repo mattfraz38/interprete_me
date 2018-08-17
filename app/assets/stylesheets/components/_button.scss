@@ -3,10 +3,16 @@
 }
 
 .home-button {
-  // background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-  // background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  border: 1px grey solid;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 7px 22px;
+    color: #1d86a0;
+    opacity: 1;
+
+}
+
+.home-button:hover {
+  background-color: gray;
+    color: #1d86a0;
+    opacity: .5;
 }
