@@ -84,18 +84,18 @@
     border-left: 250px solid transparent;
     border-right: 250px solid transparent;
     width: 100px;
-    margin: 20px;
+    margin-left: 4px;
 
   }
 
   .trapezium-text {
-
+    text-align: center;
     margin-left: 25px;
     h1 {
       color: #44bfdc;
     }
 
-    h3 {
+    h5 {
       color: gray;
     }
 
@@ -103,7 +103,29 @@
 
   }
 
-// .trapezium-container {
-//   display: flex;
 
-// }
+  .trapezium-forum {
+ background-color: #64DFFD;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
+    bottom: 0;
+    left: 0;
+    z-index: -5;
+    border-bottom: 150px solid #4BBFDB;
+    border-left: 160px solid transparent;
+    border-right: 150px solid transparent;
+    width: 96px;
+    margin: 28px;
+  }
+
+
+
+.trapezium-container {
+  justify-content: center;
+
+}
+
+.card-container {
+  justify-content: center;
+}

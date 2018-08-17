@@ -11,26 +11,32 @@
 
 
 .profile-container {
-  background: #bdc3c7;
-  background: linear-gradient(to right, #9fadbb, #606d75);
+  background: white;
+  border: solid #44BFDB;
   display: flex;
   justify-content: space-around;
-  border-radius: 3px;
+  border-radius: 10px;
   margin: 36px 50px 20px 50px;
   padding: 12px;
-  color: white;
+  color: black;
 
 }
 
 .profile-avatar {
   text-align: center;
-  margin: 15PX;
-  padding: 30px;
+  margin: 15px 15px 0 15px;
+  padding: 30px 30px 15px 30px;
+  p {
+  color: black;
+  }
 }
 
 .profile-bio {
     padding: 25px;
     margin: 40px;
+    p {
+      color: black;
+    }
 }
 
 .service-show-page {

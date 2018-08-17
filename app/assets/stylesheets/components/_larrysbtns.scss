@@ -1,0 +1,53 @@
+.larry-home-button {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 7px 22px;
+    color: #1d86a0;
+    opacity: 1;
+  }
+
+.larry-home-button:hover {
+    background-color:  #ffffff;
+    color:  black;
+    opacity: .5;
+}
+.larry-button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.larry-search-button {
+    border-radius: 4px;
+    color: #1ba0c1;
+    opacity: 1;
+    border-style: solid;
+    font-size: 1em;
+    border: 1px solid;
+    padding: 10px;
+  }
+
+.larry-search-button:hover {
+    color:  #9cd1de;
+    opacity: .5;
+    border-style: solid;
+}
+
+
+.larry-signup {
+    border-radius: 4px;
+    padding: 0px 4px;
+    color: transparent;
+    opacity: 1;
+    width: 13%;
+    height: 35%;
+    margin-left: 42%;
+    border-style: solid;
+  }
+
+.larry-signup:hover {
+    color:  transparent;
+    opacity: .5;
+    border-style: solid;
+
+
+}
